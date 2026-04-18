@@ -4,7 +4,8 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Francisca Jacob</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24'%3E%3Cpath fill='%23b0007c' d='M12 13q-.846 0-1.423-.577T10 11V5q0-.846.577-1.423T12 3t1.423.577T14 5v6q0 .846-.577 1.423T12 13m-.5 7v-3.017q-2.165-.19-3.716-1.72q-1.551-1.529-1.748-3.738q-.03-.214.11-.37Q6.286 11 6.5 11t.357.153t.185.366q.197 1.923 1.623 3.202T12 16q1.935 0 3.348-1.291q1.413-1.292 1.61-3.19q.042-.213.185-.366T17.5 11t.354.156t.11.369q-.197 2.16-1.735 3.704T12.5 16.983V20q0 .214-.143.357T12 20.5t-.357-.143T11.5 20'/%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml"
+          href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24'%3E%3Cpath fill='%23b0007c' d='M12 13q-.846 0-1.423-.577T10 11V5q0-.846.577-1.423T12 3t1.423.577T14 5v6q0 .846-.577 1.423T12 13m-.5 7v-3.017q-2.165-.19-3.716-1.72q-1.551-1.529-1.748-3.738q-.03-.214.11-.37Q6.286 11 6.5 11t.357.153t.185.366q.197 1.923 1.623 3.202T12 16q1.935 0 3.348-1.291q1.413-1.292 1.61-3.19q.042-.213.185-.366T17.5 11t.354.156t.11.369q-.197 2.16-1.735 3.704T12.5 16.983V20q0 .214-.143.357T12 20.5t-.357-.143T11.5 20'/%3E%3C/svg%3E">
     <link href="https://fonts.googleapis.com" rel="preconnect"/>
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,700;1,6..72,400&display=swap"
@@ -99,7 +100,11 @@
                         // Sombra base suave con 4 capas progresivas
                         "soft-layered": "0 2px 5px rgba(60, 0, 40, 0.02), 0 6px 15px rgba(60, 0, 40, 0.03), 0 12px 30px rgba(60, 0, 40, 0.04), 0 24px 60px rgba(60, 0, 40, 0.05)",
                         // Sombra más pronunciada para el efecto Hover (flotación)
-                        "soft-layered-hover": "0 4px 10px rgba(60, 0, 40, 0.03), 0 10px 25px rgba(60, 0, 40, 0.04), 0 20px 50px rgba(60, 0, 40, 0.06), 0 40px 80px rgba(60, 0, 40, 0.08)"
+                        "soft-layered-hover": "0 4px 10px rgba(60, 0, 40, 0.03), 0 10px 25px rgba(60, 0, 40, 0.04), 0 20px 50px rgba(60, 0, 40, 0.06), 0 40px 80px rgba(60, 0, 40, 0.08)",
+                        // FASE 2: Efecto Neón para Modo Oscuro (Idea 1)
+                        "neon-glow": "0 0 10px rgba(240, 95, 181, 0.3), 0 0 20px rgba(240, 95, 181, 0.2), 0 0 30px rgba(240, 95, 181, 0.1), inset 0 0 2px rgba(240, 95, 181, 0.3)",
+                        // FASE 2: Sombras invertidas para Modo Oscuro (Idea 6)
+                        "inner-dark": "inset 0 4px 10px rgba(0, 0, 0, 0.6), inset 0 2px 4px rgba(0, 0, 0, 0.4), inset 0 -1px 2px rgba(240, 95, 181, 0.15)"
                     },
                 },
             },
@@ -109,6 +114,7 @@
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
+
         /* =======================================================
         EFECTO LINTERNA: Textura de Puntos (Dot Pattern Overlay)
         ======================================================= */
@@ -154,12 +160,7 @@
             /* Degradado lineal usando la paleta base con un reflejo blanco/rosado central */
             background-image: linear-gradient(
                     110deg,
-                    #b0007c 10%,      /* primary */
-                    #a23276 30%,      /* secondary */
-                    #ffffff 45%,      /* Reflejo de luz blanca */
-                    #ffd8e8 55%,      /* secondary-fixed (transición suave del brillo) */
-                    #b0007c 70%,      /* primary */
-                    #963971 100%      /* tertiary */
+                    #b0007c 10%, /* primary */ #a23276 30%, /* secondary */ #ffffff 45%, /* Reflejo de luz blanca */ #ffd8e8 55%, /* secondary-fixed (transición suave del brillo) */ #b0007c 70%, /* primary */ #963971 100% /* tertiary */
             );
             background-size: 200% auto;
             color: transparent; /* Hace que el color del texto sea transparente */
@@ -170,8 +171,125 @@
 
         /* Desplazamiento del fondo para crear el efecto de brillo pasando sobre el texto */
         @keyframes chromeShine {
-            0% { background-position: 200% center; }
-            100% { background-position: -200% center; }
+            0% {
+                background-position: 200% center;
+            }
+            100% {
+                background-position: -200% center;
+            }
+        }
+
+        /* =======================================================
+           IDEA 2: TÍTULOS LUMINOSOS DINÁMICOS (Solo Modo Oscuro)
+           ======================================================= */
+        html.dark .chrome-title {
+            /* Degradado usando la paleta oscura con un núcleo hiper brillante */
+            background-image: linear-gradient(
+                    110deg,
+                    #F05FB5 10%, /* dark-primary */ #F59FCC 30%, /* dark-secondary */ #ffffff 45%, /* Reflejo de luz blanca intensa central */ #F9CFE4 55%, /* dark-on-surface-variant (transición) */ #F05FB5 70%, /* dark-primary */ #DE37A1 100% /* dark-primary-container */
+            );
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: chromeShine 6s linear infinite; /* Reutilizamos tus keyframes exactos */
+
+            /* Filtro drop-shadow doble para crear la irradiación de luz (Glow) exterior */
+            filter: drop-shadow(0 0 8px rgba(240, 95, 181, 0.5)) drop-shadow(0 0 16px rgba(240, 95, 181, 0.2));
+            will-change: filter, background-position; /* Optimización de hardware */
+        }
+
+        /* =======================================================
+           IDEA 3: FONDOS OSCUROS MULTICAPA ESPACIALES
+           ======================================================= */
+        html.dark body {
+            background-color: #260318 !important; /* Color base profundo (dark-surface) */
+            /* Apilamos 4 capas de gradientes para crear áreas complejas de luz y sombra */
+            background-image: /* Capa 1: Resplandor en la esquina superior izquierda */ radial-gradient(circle at 10% 10%, #3B0728 0%, transparent 40%),
+                /* Capa 2: Nebulosa sutil en el centro-derecha */ radial-gradient(circle at 85% 40%, rgba(99, 19, 69, 0.15) 0%, transparent 50%),
+                /* Capa 3: Resplandor profundo en la base de la pantalla */ radial-gradient(circle at 50% 90%, #3B0728 0%, transparent 45%),
+                /* Capa 4: Micro-iluminación top-right (usando tu dark-primary) para balance */ radial-gradient(circle at 90% 5%, rgba(240, 95, 181, 0.05) 0%, transparent 25%) !important;
+
+            /* Fijamos el fondo para que el contenido se deslice sobre él (efecto parallax sutil) */
+            background-attachment: fixed !important;
+        }
+
+        /* Hacemos transparentes las etiquetas <section> para revelar el fondo espacial,
+           dejando intactas las tarjetas (divs) y el header (backdrop-blur) */
+        html.dark section {
+            background-color: transparent !important;
+        }
+
+        /* =======================================================
+           IDEA 4: HOVER ILLUMINATION (CARDS ILUMINADAS DESDE EL INTERIOR)
+           ======================================================= */
+        /* Apuntamos a las tarjetas específicas usando su clase de fondo de Tailwind */
+        html.dark .dark\:bg-dark-surface-container-lowest::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: inherit; /* Adopta automáticamente el rounded-md de la tarjeta */
+
+            /* Inyectamos la luz: un gradiente radial central difuso usando tu color dark-primary */
+            background: radial-gradient(
+                    circle at 50% 50%,
+                    rgba(240, 95, 181, 0.12) 0%,
+                    transparent 70%
+            );
+
+            opacity: 0;
+            transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Transición premium y fluida */
+            pointer-events: none; /* CRÍTICO: Evita que la luz bloquee la selección de texto o clicks */
+            mix-blend-mode: screen; /* Modo de fusión para que actúe como "luz" sobre el fondo oscuro */
+            z-index: 1;
+        }
+
+        /* Encendemos la luz interna únicamente en estado hover */
+        html.dark .dark\:bg-dark-surface-container-lowest:hover::before {
+            opacity: 1;
+        }
+
+        /* =======================================================
+   IDEA 5: BOTONES "NEON-GLASS" (CORREGIDO)
+   ======================================================= */
+        /* Añadimos "#principal" antes para que NO afecte al menú de navegación */
+        html.dark #principal a[href="#trayectoria"] {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(240, 95, 181, 0.05) 100%) !important;
+            backdrop-filter: blur(12px) !important;
+            -webkit-backdrop-filter: blur(12px) !important;
+            border: 1px solid rgba(240, 95, 181, 0.4) !important;
+            color: #FDECF4 !important;
+            box-shadow: 0 0 15px rgba(240, 95, 181, 0.15), inset 0 0 12px rgba(240, 95, 181, 0.1) !important;
+            text-shadow: 0 0 8px rgba(240, 95, 181, 0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        }
+
+        /* También corregimos el selector del Hover */
+        html.dark #principal a[href="#trayectoria"]:hover {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(240, 95, 181, 0.15) 100%) !important;
+            border-color: rgba(240, 95, 181, 0.8) !important;
+            box-shadow: 0 0 25px rgba(240, 95, 181, 0.4), inset 0 0 20px rgba(240, 95, 181, 0.25) !important;
+            transform: translateY(-3px) !important;
+            color: #ffffff !important;
+            text-shadow: 0 0 12px rgba(240, 95, 181, 0.6);
+        }
+
+        /* =======================================================
+           IDEA 7: RUIDO DIGITAL SUTIL (Solo Modo Oscuro)
+           ======================================================= */
+        html.dark body::after {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none; /* CRÍTICO: Inofensivo para la interacción, clics y selección */
+            z-index: 0; /* Pegado al fondo, debajo del contenido principal */
+
+            /* Textura de ruido SVG inyectada matemáticamente vía Data URI */
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+
+            /* Fusión perfecta para el modo oscuro */
+            opacity: 0.035; /* Menos del 4% para que sea casi subliminal */
+            mix-blend-mode: screen; /* Aclara sutilmente los píxeles del fondo espacial */
         }
 
         /* =======================================================
@@ -193,16 +311,24 @@
         }
 
         /* Clases utilitarias para retrasar la animación en elementos agrupados */
-        .reveal-delay-100 { transition-delay: 100ms; }
-        .reveal-delay-200 { transition-delay: 200ms; }
+        .reveal-delay-100 {
+            transition-delay: 100ms;
+        }
+
+        .reveal-delay-200 {
+            transition-delay: 200ms;
+        }
     </style>
 </head>
 <body class="bg-surface text-on-surface font-body antialiased selection:bg-primary selection:text-on-primary dark:bg-dark-surface dark:text-dark-on-surface dark:selection:bg-dark-primary dark:selection:text-dark-on-primary transition-colors duration-300">
 <header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl dark:bg-dark-surface/80 transition-colors duration-300">
     <div class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto w-full">
-        <a href="#" class="flex items-center gap-3 text-2xl font-headline font-bold text-on-surface dark:text-dark-on-surface transition-colors duration-300 group hover:opacity-80">
-            <svg class="text-primary dark:text-dark-primary transition-colors duration-300" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M12 13q-.846 0-1.423-.577T10 11V5q0-.846.577-1.423T12 3t1.423.577T14 5v6q0 .846-.577 1.423T12 13m-.5 7v-3.017q-2.165-.19-3.716-1.72q-1.551-1.529-1.748-3.738q-.03-.214.11-.37Q6.286 11 6.5 11t.357.153t.185.366q.197 1.923 1.623 3.202T12 16q1.935 0 3.348-1.291q1.413-1.292 1.61-3.19q.042-.213.185-.366T17.5 11t.354.156t.11.369q-.197 2.16-1.735 3.704T12.5 16.983V20q0 .214-.143.357T12 20.5t-.357-.143T11.5 20"/>
+        <a href="#"
+           class="flex items-center gap-3 text-2xl font-headline font-bold text-on-surface dark:text-dark-on-surface transition-colors duration-300 group hover:opacity-80">
+            <svg class="text-primary dark:text-dark-primary transition-colors duration-300"
+                 xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                      d="M12 13q-.846 0-1.423-.577T10 11V5q0-.846.577-1.423T12 3t1.423.577T14 5v6q0 .846-.577 1.423T12 13m-.5 7v-3.017q-2.165-.19-3.716-1.72q-1.551-1.529-1.748-3.738q-.03-.214.11-.37Q6.286 11 6.5 11t.357.153t.185.366q.197 1.923 1.623 3.202T12 16q1.935 0 3.348-1.291q1.413-1.292 1.61-3.19q.042-.213.185-.366T17.5 11t.354.156t.11.369q-.197 2.16-1.735 3.704T12.5 16.983V20q0 .214-.143.357T12 20.5t-.357-.143T11.5 20"/>
             </svg>
             <span>Francisca Jacob</span>
         </a>
@@ -233,7 +359,9 @@
                     <span class="!text-black dark:!text-dark-primary italic transition-colors duration-300">& Gestión Pública</span>
                 </h1>
                 <p class="font-body text-xl md:text-2xl text-on-surface-variant dark:text-dark-on-surface-variant leading-relaxed max-w-xl mb-12 transition-colors duration-300">
-                    Periodista bilingüe con sólida experiencia en gestión pública, coordinación académica y comunicación institucional. Especializada en el <strong>liderazgo</strong> de proyectos de alto impacto, planificación de eventos y vinculación estratégica.
+                    Periodista bilingüe con sólida experiencia en gestión pública, coordinación académica y comunicación
+                    institucional. Especializada en el <strong>liderazgo</strong> de proyectos de alto impacto,
+                    planificación de eventos y vinculación estratégica.
                 </p>
                 <a class="inline-flex items-center justify-center font-body font-medium px-8 py-4 rounded-xl transition-all duration-300 bg-white/40 backdrop-blur-md border border-white/60 text-primary shadow-soft-layered hover:bg-white/70 hover:shadow-soft-layered-hover hover:-translate-y-1 dark:bg-gradient-to-r dark:from-dark-primary dark:to-dark-primary-container dark:text-dark-on-primary dark:border-transparent dark:shadow-none dark:hover:-translate-y-0 dark:hover:opacity-90 relative z-20"
                    href="#trayectoria">
@@ -242,7 +370,7 @@
             </div>
             <div class="lg:col-span-6 relative">
                 <div class="absolute -inset-4 bg-surface-container-low dark:bg-dark-surface-container-low rounded-xl transform rotate-2 z-0 transition-colors duration-300"></div>
-                <div class="relative z-10 w-full aspect-[4/5] overflow-hidden rounded-md bg-surface-variant dark:bg-dark-surface-variant transition-all duration-500 shadow-soft-layered hover:shadow-soft-layered-hover dark:shadow-none dark:hover:shadow-none">
+                <div class="relative z-10 w-full aspect-[4/5] overflow-hidden rounded-md bg-surface-variant dark:bg-dark-surface-variant transition-all duration-500 shadow-soft-layered hover:shadow-soft-layered-hover dark:shadow-none dark:ring-1 dark:ring-transparent dark:hover:ring-dark-primary dark:hover:shadow-neon-glow">
                     <img alt="Francisca Jacob" class="w-full h-full object-cover object-center"
                          data-alt="portrait of a professional female journalist in a modern bright office with subtle soft lighting, wearing an elegant blazer, looking confident"
                          src="./static/img/francisca.png"/>
@@ -251,9 +379,11 @@
         </div>
     </section>
 
-    <div class="w-full max-w-5xl mx-auto h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent dark:hidden"></div>
+    <div class="w-full max-w-5xl mx-auto h-px bg-gradient-to-r from-transparent via-primary/20 dark:via-dark-primary/30 to-transparent transition-colors duration-300"></div>
 
-    <section class="py-32 bg-surface-container-low dark:bg-dark-surface-container-low px-8 transition-colors duration-300" id="sobre-mi">
+    <section
+            class="py-32 bg-surface-container-low dark:bg-dark-surface-container-low px-8 transition-colors duration-300"
+            id="sobre-mi">
         <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-16">
             <div class="lg:col-span-4 flex flex-col justify-start">
                 <span class="font-label text-sm uppercase tracking-[0.1em] text-secondary dark:text-dark-secondary font-bold mb-4 transition-colors duration-300">Sobre Mí</span>
@@ -284,7 +414,7 @@
         </div>
     </section>
 
-    <div class="w-full max-w-5xl mx-auto h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent dark:hidden"></div>
+    <div class="w-full max-w-5xl mx-auto h-px bg-gradient-to-r from-transparent via-primary/20 dark:via-dark-primary/30 to-transparent transition-colors duration-300"></div>
 
     <section class="py-32 bg-surface dark:bg-dark-surface px-8 transition-colors duration-300" id="trayectoria">
         <div class="max-w-7xl mx-auto w-full">
@@ -294,7 +424,7 @@
                     Educación y Formación</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="reveal-on-scroll bg-surface-container-lowest dark:bg-dark-surface-container-lowest p-10 rounded-md transition-all duration-500 hover:-translate-y-2 shadow-soft-layered hover:shadow-soft-layered-hover dark:shadow-none dark:hover:shadow-none relative z-20">
+                <div class="reveal-on-scroll bg-surface-container-lowest dark:bg-dark-surface-container-lowest p-10 rounded-md transition-all duration-500 hover:-translate-y-2 shadow-soft-layered hover:shadow-soft-layered-hover dark:shadow-none dark:ring-1 dark:ring-transparent dark:hover:ring-dark-primary dark:hover:shadow-neon-glow relative z-20">
                     <span class="font-label text-xs uppercase tracking-widest text-outline dark:text-dark-outline mb-2 block transition-colors duration-300">2007 - 2011</span>
                     <h3 class="font-headline text-2xl text-on-surface dark:text-dark-on-surface mb-2 transition-colors duration-300">
                         Periodismo </h3>
@@ -306,7 +436,7 @@
                         como Corresponsal de Ejército (2011).
                     </p>
                 </div>
-                <div class="reveal-on-scroll reveal-delay-200 bg-surface-container-lowest dark:bg-dark-surface-container-lowest p-10 rounded-md transition-all duration-500 hover:-translate-y-2 shadow-soft-layered hover:shadow-soft-layered-hover dark:shadow-none dark:hover:shadow-none relative z-20">
+                <div class="reveal-on-scroll reveal-delay-200 bg-surface-container-lowest dark:bg-dark-surface-container-lowest p-10 rounded-md transition-all duration-500 hover:-translate-y-2 shadow-soft-layered hover:shadow-soft-layered-hover dark:shadow-none dark:ring-1 dark:ring-transparent dark:hover:ring-dark-primary dark:hover:shadow-neon-glow relative z-20">
                     <span class="font-label text-xs uppercase tracking-widest text-outline dark:text-dark-outline mb-2 block transition-colors duration-300">2016 - 2018</span>
                     <h3 class="font-headline text-2xl text-on-surface dark:text-dark-on-surface mb-2 transition-colors duration-300">
                         Certificación Internacional FCE Cambridge</h3>
@@ -321,9 +451,11 @@
         </div>
     </section>
 
-    <div class="w-full max-w-5xl mx-auto h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent dark:hidden"></div>
+    <div class="w-full max-w-5xl mx-auto h-px bg-gradient-to-r from-transparent via-primary/20 dark:via-dark-primary/30 to-transparent transition-colors duration-300"></div>
 
-    <section class="py-32 bg-surface-container-low dark:bg-dark-surface-container-low px-8 transition-colors duration-300" id="experiencia">
+    <section
+            class="py-32 bg-surface-container-low dark:bg-dark-surface-container-low px-8 transition-colors duration-300"
+            id="experiencia">
         <div class="max-w-3xl mx-auto w-full">
             <div class="mb-20 text-center">
                 <h2 class="font-headline text-4xl text-on-surface dark:text-dark-on-surface tracking-tight mb-4 transition-colors duration-300 chrome-title">
@@ -345,7 +477,7 @@
                         Desempeño funciones como Profesional en la Dirección de Medio Ambiente.
                     </p>
                 </div>
-                <div class="w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent dark:hidden my-12"></div>
+                <div class="w-full h-px bg-gradient-to-r from-transparent via-primary/20 dark:via-dark-primary/30 to-transparent my-12 transition-colors duration-300"></div>
                 <div class="group reveal-on-scroll reveal-delay-200">
                     <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-2">
                         <h3 class="font-headline text-3xl text-on-surface dark:text-dark-on-surface group-hover:text-primary dark:group-hover:text-dark-primary transition-colors duration-300">
@@ -364,15 +496,15 @@
         </div>
     </section>
 
-    <div class="w-full max-w-5xl mx-auto h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent dark:hidden"></div>
+    <div class="w-full max-w-5xl mx-auto h-px bg-gradient-to-r from-transparent via-primary/20 dark:via-dark-primary/30 to-transparent transition-colors duration-300"></div>
 
     <section class="py-32 bg-surface dark:bg-dark-surface px-8 transition-colors duration-300" id="habilidades">
         <div class="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center gap-16">
             <div class="w-full md:w-1/2 reveal-on-scroll">
-                <div class="relative w-full aspect-square overflow-hidden rounded-full bg-surface-container-low dark:bg-dark-surface-container-low p-8 transition-colors duration-300">
+                <div class="relative w-full aspect-square overflow-hidden rounded-full bg-surface-container-low dark:bg-dark-surface-container-low p-8 transition-colors duration-300 dark:shadow-inner-dark">
                     <div class="w-full h-full rounded-full overflow-hidden">
                         <img alt="International working environment"
-                             class="w-full h-full object-cover grayscale opacity-80 mix-blend-multiply"
+                             class="w-full h-full object-cover grayscale opacity-80 mix-blend-multiply dark:mix-blend-screen dark:opacity-40 transition-all duration-500"
                              data-alt="abstract composition of international newspapers, a vintage typewriter, and coffee on a clean wooden desk, soft natural lighting from a window"
                              src="./static/img/charla.png"/>
                     </div>
@@ -390,7 +522,7 @@
                 <div class="flex flex-wrap gap-3">
                     <span class="bg-secondary-container dark:bg-dark-secondary-container text-on-secondary-container dark:text-dark-on-secondary-container rounded-full px-5 py-2 text-sm font-label uppercase tracking-widest transition-colors duration-300">Periodismo</span>
                     <span class="bg-surface-container-high dark:bg-dark-surface-container-high text-on-surface dark:text-dark-on-surface rounded-full px-5 py-2 text-sm font-label uppercase tracking-widest transition-colors duration-300">Planificación de eventos</span>
-                    <span class="bg-surface-container-high dark:bg-dark-surface-container-high text-on-surface dark:text-dark-on-surface rounded-full px-5 py-2 text-sm font-label uppercase tracking-widest transition-colors duration-300">Microsoft Office</span>
+                    <span class="bg-surface-container-high dark:bg-dark-surface-container-high text-on-surface dark:text-dark-on-surface rounded-full px-5 py-2 text-sm font-label uppercase tracking-widest transition-colors duration-300">IA Generativa</span>
                 </div>
             </div>
         </div>
@@ -408,14 +540,18 @@
             </a>
         </div>
         <nav class="flex gap-6 mb-8 md:mb-0">
-            <a aria-label="Perfil de LinkedIn" class="text-on-surface/60 dark:text-dark-on-surface/60 hover:text-primary dark:hover:text-dark-primary transition-all duration-300 hover:-translate-y-1"
+            <a aria-label="Perfil de LinkedIn"
+               class="text-on-surface/60 dark:text-dark-on-surface/60 hover:text-primary dark:hover:text-dark-primary transition-all duration-300 hover:-translate-y-1"
                href="https://www.linkedin.com/in/francisca-jacob-castillo-b1ab2b33">
                 <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path fill="currentColor" fill-rule="evenodd" d="M5 1a4 4 0 0 0-4 4v14a4 4 0 0 0 4 4h14a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4zm1.205 6.91a1.705 1.705 0 1 0 0-3.41a1.705 1.705 0 0 0 0 3.41M7.909 19.5V9.273H4.5V19.5h3.41Zm4.432-10.227H9.273V19.5h3.068v-6.17c.395-.642 1.077-1.33 2.045-1.33c1.364 0 1.705 1.364 1.705 2.046V19.5H19.5v-5.454c0-1.828-.797-4.773-3.75-4.773c-1.878 0-2.92.685-3.41 1.327z" clip-rule="evenodd"/>
+                    <path fill="currentColor" fill-rule="evenodd"
+                          d="M5 1a4 4 0 0 0-4 4v14a4 4 0 0 0 4 4h14a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4zm1.205 6.91a1.705 1.705 0 1 0 0-3.41a1.705 1.705 0 0 0 0 3.41M7.909 19.5V9.273H4.5V19.5h3.41Zm4.432-10.227H9.273V19.5h3.068v-6.17c.395-.642 1.077-1.33 2.045-1.33c1.364 0 1.705 1.364 1.705 2.046V19.5H19.5v-5.454c0-1.828-.797-4.773-3.75-4.773c-1.878 0-2.92.685-3.41 1.327z"
+                          clip-rule="evenodd"/>
                 </svg>
             </a>
 
-            <a aria-label="Enviar Email" class="text-on-surface/60 dark:text-dark-on-surface/60 hover:text-primary dark:hover:text-dark-primary transition-all duration-300 hover:-translate-y-1"
+            <a aria-label="Enviar Email"
+               class="text-on-surface/60 dark:text-dark-on-surface/60 hover:text-primary dark:hover:text-dark-primary transition-all duration-300 hover:-translate-y-1"
                href="mailto:franciscajacob@gmail.com">
                 <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <g fill="none" stroke="currentColor">
@@ -433,7 +569,7 @@
     </div>
 </footer>
 
-<script >
+<script>
     document.addEventListener('DOMContentLoaded', () => {
         const html = document.documentElement;
         const themeToggleBtn = document.getElementById('theme-toggle');
