@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos extraídos de la etiqueta <style> del HTML */
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* =======================================================
+EFECTO LINTERNA: Textura de Puntos (Dot Pattern Overlay)
+======================================================= */
+.flashlight-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    pointer-events: none;
+    --x: 50vw;
+    --y: 50vh;
+    -webkit-mask-image: radial-gradient(circle 200px at var(--x) var(--y), black 10%, transparent 100%);
+    mask-image: radial-gradient(circle 200px at var(--x) var(--y), black 10%, transparent 100%);
+    transition: opacity 0.3s ease;
+}
+
+.light .flashlight-overlay {
+    background-image: radial-gradient(rgba(176, 0, 124, 0.15) 2px, transparent 2px);
+    background-size: 24px 24px;
+}
+
+.dark .flashlight-overlay {
+    display: none;
+}
+
+/* =======================================================
+   IDEA 2: EFECTO CROMADO SUAVE ANIMADO
+   ======================================================= */
+html.light .chrome-title {
+    background-image: linear-gradient(
+            110deg,
+            #b0007c 10%, #a23276 30%, #ffffff 45%, #ffd8e8 55%, #b0007c 70%, #963971 100%
+    );
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: chromeShine 6s linear infinite;
+}
+
+@keyframes chromeShine {
+    0% { background-position: 200% center; }
+    100% { background-position: -200% center; }
+}
+
+html.dark .chrome-title {
+    background-image: linear-gradient(
+            110deg,
+            #F05FB5 10%, #F59FCC 30%, #ffffff 45%, #F9CFE4 55%, #F05FB5 70%, #DE37A1 100%
+    );
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: chromeShine 6s linear infinite;
+    filter: drop-shadow(0 0 8px rgba(240, 95, 181, 0.5)) drop-shadow(0 0 16px rgba(240, 95, 181, 0.2));
+    will-change: filter, background-position;
+}
+
+/* =======================================================
+   IDEA 3: FONDOS OSCUROS MULTICAPA ESPACIALES
+   ======================================================= */
+html.dark body {
+    background-color: #260318 !important;
+    background-image:
+            radial-gradient(circle at 10% 10%, #3B0728 0%, transparent 40%),
+            radial-gradient(circle at 85% 40%, rgba(99, 19, 69, 0.15) 0%, transparent 50%),
+            radial-gradient(circle at 50% 90%, #3B0728 0%, transparent 45%),
+            radial-gradient(circle at 90% 5%, rgba(240, 95, 181, 0.05) 0%, transparent 25%) !important;
+    background-attachment: fixed !important;
+}
+
+html.dark section {
+    background-color: transparent !important;
+}
+
+/* =======================================================
+   IDEA 4: HOVER ILLUMINATION
+   ======================================================= */
+html.dark .dark\:bg-dark-surface-container-lowest::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(
+            circle at 50% 50%,
+            rgba(240, 95, 181, 0.12) 0%,
+            transparent 70%
+    );
+    opacity: 0;
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    mix-blend-mode: screen;
+    z-index: 1;
+}
+
+html.dark .dark\:bg-dark-surface-container-lowest:hover::before {
+    opacity: 1;
+}
+
+/* =======================================================
+   IDEA 5: BOTONES "NEON-GLASS"
+   ======================================================= */
+html.dark #principal a[href="#trayectoria"] {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(240, 95, 181, 0.05) 100%) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(240, 95, 181, 0.4) !important;
+    color: #FDECF4 !important;
+    box-shadow: 0 0 15px rgba(240, 95, 181, 0.15), inset 0 0 12px rgba(240, 95, 181, 0.1) !important;
+    text-shadow: 0 0 8px rgba(240, 95, 181, 0.3);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+html.dark #principal a[href="#trayectoria"]:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(240, 95, 181, 0.15) 100%) !important;
+    border-color: rgba(240, 95, 181, 0.8) !important;
+    box-shadow: 0 0 25px rgba(240, 95, 181, 0.4), inset 0 0 20px rgba(240, 95, 181, 0.25) !important;
+    transform: translateY(-3px) !important;
+    color: #ffffff !important;
+    text-shadow: 0 0 12px rgba(240, 95, 181, 0.6);
+}
+
+/* =======================================================
+   IDEA 7: RUIDO DIGITAL SUTIL
+   ======================================================= */
+html.dark body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.035;
+    mix-blend-mode: screen;
+}
+
+/* =======================================================
+   IDEA 6: MICROINTERACCIONES DE SCROLL
+   ======================================================= */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
+    transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-delay-100 { transition-delay: 100ms; }
+.reveal-delay-200 { transition-delay: 200ms; }

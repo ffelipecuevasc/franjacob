@@ -1,0 +1,20 @@
+{
+  "name": "cv-francisca",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tailwindcss -i ./static/css/styles.css -o ./static/css/tailwind.css --watch",
+    "build": "tailwindcss -i ./static/css/styles.css -o ./static/css/tailwind.css --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@tailwindcss/container-queries": "^0.1.1",
+    "@tailwindcss/forms": "^0.5.11",
+    "autoprefixer": "^10.5.0",
+    "postcss": "^8.5.12",
+    "tailwindcss": "^3.4.19"
+  }
+}
