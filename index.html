@@ -236,9 +236,11 @@
 
     <div class="w-full max-w-5xl mx-auto h-px bg-gradient-to-r from-transparent via-primary/20 dark:via-dark-primary/30 to-transparent transition-colors duration-300"></div>
 
-    <section class="py-32 bg-surface-container-low dark:bg-dark-surface-container-low px-8 transition-colors duration-300" id="experiencia">
+    <section class="py-32 bg-surface-container-low dark:bg-dark-surface-container-low px-8 transition-colors duration-300 overflow-x-hidden" id="experiencia">
         <div class="max-w-7xl mx-auto w-full">
-            <div class="mb-24 text-center">
+
+            <!-- Título con efecto de entrada desde abajo (base) -->
+            <div class="mb-24 text-center reveal-on-scroll">
                 <h2 class="font-headline text-4xl md:text-5xl text-on-surface dark:text-dark-on-surface tracking-tight mb-4 transition-colors duration-300 chrome-title">
                     Experiencia Profesional</h2>
                 <p class="font-body text-on-surface-variant dark:text-dark-on-surface-variant text-xl transition-colors duration-300">
@@ -247,7 +249,8 @@
 
             <div class="flex flex-col w-full">
 
-                <div class="group reveal-on-scroll flex flex-col lg:flex-row gap-8 lg:gap-16 items-start w-full">
+                <!-- 1. Profesional | ENTRA DESDE LA IZQUIERDA -->
+                <div class="group reveal-on-scroll reveal-from-left flex flex-col lg:flex-row gap-8 lg:gap-16 items-start w-full">
                     <div class="w-full lg:w-[30%] flex flex-col gap-3">
                         <div class="w-16 h-16 bg-transparent flex items-center justify-start text-primary dark:text-dark-primary mb-2 transition-transform duration-500 group-hover:scale-110">
                             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
@@ -290,7 +293,8 @@
 
                 <div class="w-full h-px bg-gradient-to-r from-transparent via-primary/20 dark:via-dark-primary/30 to-transparent my-12 transition-colors duration-300"></div>
 
-                <div class="group reveal-on-scroll flex flex-col lg:flex-row-reverse gap-8 lg:gap-16 items-start w-full">
+                <!-- 2. Jefa de Gabinete | ENTRA DESDE LA DERECHA -->
+                <div class="group reveal-on-scroll reveal-from-right flex flex-col lg:flex-row-reverse gap-8 lg:gap-16 items-start w-full">
                     <div class="w-full lg:w-[30%] flex flex-col gap-3 lg:items-end lg:text-right">
                         <div class="w-16 h-16 bg-transparent flex items-center lg:justify-end justify-start text-primary dark:text-dark-primary mb-2 transition-transform duration-500 group-hover:scale-110">
                             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
@@ -332,7 +336,8 @@
 
                 <div class="w-full h-px bg-gradient-to-r from-transparent via-primary/20 dark:via-dark-primary/30 to-transparent my-12 transition-colors duration-300"></div>
 
-                <div class="group reveal-on-scroll flex flex-col lg:flex-row gap-8 lg:gap-16 items-start w-full">
+                <!-- 3. Coordinadora | ENTRA DESDE LA IZQUIERDA -->
+                <div class="group reveal-on-scroll reveal-from-left flex flex-col lg:flex-row gap-8 lg:gap-16 items-start w-full">
                     <div class="w-full lg:w-[30%] flex flex-col gap-3">
                         <div class="w-16 h-16 bg-transparent flex items-center justify-start text-primary dark:text-dark-primary mb-2 transition-transform duration-500 group-hover:scale-110">
                             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
@@ -353,20 +358,21 @@
 
                     <div class="w-full lg:w-[70%] relative z-20">
                         <p class="font-body text-on-surface-variant dark:text-dark-on-surface-variant text-base leading-relaxed transition-colors duration-300 mb-6">
-                            Lideré la gestión, implementación y seguimiento de iniciativas orientadas a disminuir las brechas de género en el ámbito de I+D+i+e de la Universidad de Antofagasta[cite: 25]. A cargo de un equipo multidisciplinario, mis responsabilidades clave incluyeron[cite: 24]:
+                            Lideré la gestión, implementación y seguimiento de iniciativas orientadas a disminuir las brechas de género en el ámbito de I+D+i+e de la Universidad de Antofagasta. A cargo de un equipo multidisciplinario, mis responsabilidades clave incluyeron:
                         </p>
                         <ul class="list-disc ml-6 space-y-3 font-body text-base text-on-surface-variant dark:text-dark-on-surface-variant transition-colors duration-300">
-                            <li><em><strong>Liderazgo y Gestión:</strong> Coordinación de un equipo de 3 profesionales (especialista en contenido, analista financiero y psicólogo) y planificación periódica de acciones para cumplir los objetivos y metas de la Unidad de Igualdad de Género[cite: 24, 32, 33].</em></li>
-                            <li><em><strong>Acceso y Desarrollo:</strong> Implementación de iniciativas para asegurar el acceso, desarrollo y liderazgo de las mujeres en el sistema de ciencia, tecnología, conocimiento e innovación (CTCI) de la institución[cite: 34].</em></li>
-                            <li><em><strong>Visibilidad y Asesoría:</strong> Asesoría a la comunidad universitaria en temáticas de igualdad y desarrollo de actividades para visibilizar las trayectorias de mujeres en investigación de base científica tecnológica[cite: 35, 36].</em></li>
-                            <li><em><strong>Articulación Institucional:</strong> Trabajo colaborativo con las distintas Direcciones de la Vicerrectoría de Investigación (VRIP), elaboración de informes mensuales, y actualización de documentos y procedimientos relacionados a la igualdad de género[cite: 38, 39, 40].</em></li>
+                            <li><em><strong>Liderazgo y Gestión:</strong> Coordinación de un equipo de 3 profesionales (especialista en contenido, analista financiero y psicólogo) y planificación periódica de acciones para cumplir los objetivos y metas de la Unidad de Igualdad de Género.</em></li>
+                            <li><em><strong>Acceso y Desarrollo:</strong> Implementación de iniciativas para asegurar el acceso, desarrollo y liderazgo de las mujeres en el sistema de ciencia, tecnología, conocimiento e innovación (CTCI) de la institución.</em></li>
+                            <li><em><strong>Visibilidad y Asesoría:</strong> Asesoría a la comunidad universitaria en temáticas de igualdad y desarrollo de actividades para visibilizar las trayectorias de mujeres en investigación de base científica tecnológica.</em></li>
+                            <li><em><strong>Articulación Institucional:</strong> Trabajo colaborativo con las distintas Direcciones de la Vicerrectoría de Investigación (VRIP), elaboración de informes mensuales, y actualización de documentos y procedimientos relacionados a la igualdad de género.</em></li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="w-full h-px bg-gradient-to-r from-transparent via-primary/20 dark:via-dark-primary/30 to-transparent my-12 transition-colors duration-300"></div>
 
-                <div class="group reveal-on-scroll flex flex-col lg:flex-row-reverse gap-8 lg:gap-16 items-start w-full">
+                <!-- 4. Divulgadora | ENTRA DESDE LA DERECHA -->
+                <div class="group reveal-on-scroll reveal-from-right flex flex-col lg:flex-row-reverse gap-8 lg:gap-16 items-start w-full">
                     <div class="w-full lg:w-[30%] flex flex-col gap-3 lg:items-end lg:text-right">
                         <div class="w-16 h-16 bg-transparent flex items-center lg:justify-end justify-start text-primary dark:text-dark-primary mb-2 transition-transform duration-500 group-hover:scale-110">
                             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
@@ -484,95 +490,6 @@
     </div>
 </footer>
 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const html = document.documentElement;
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        const themeIcon = document.getElementById('theme-icon');
-
-        // Función para aplicar tema y cambiar el icono
-        const applyTheme = (theme) => {
-            if (theme === 'dark') {
-                html.classList.add('dark');
-                html.classList.remove('light');
-                themeIcon.textContent = 'light_mode'; // Muestra el sol en modo oscuro
-            } else {
-                html.classList.add('light');
-                html.classList.remove('dark');
-                themeIcon.textContent = 'dark_mode'; // Muestra la luna en modo claro
-            }
-        };
-
-        // 1. Cargar preferencia guardada
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-            applyTheme(savedTheme);
-        }
-
-        // 2. Evento del botón para alternar el tema
-        themeToggleBtn.addEventListener('click', () => {
-            if (html.classList.contains('dark')) {
-                applyTheme('light');
-                localStorage.setItem('theme', 'light');
-            } else {
-                applyTheme('dark');
-                localStorage.setItem('theme', 'dark');
-            }
-        });
-    });
-
-    /* =======================================================
-   EFECTO LINTERNA: Lógica de seguimiento del cursor
-   ======================================================= */
-    document.addEventListener('DOMContentLoaded', () => {
-        // 1. Crear el elemento div dinámicamente y añadir la clase
-        const flashlight = document.createElement('div');
-        flashlight.classList.add('flashlight-overlay');
-
-        // Lo inyectamos al principio del body para mantener orden en el DOM
-        document.body.prepend(flashlight);
-
-        // 2. Escuchar el movimiento del mouse en toda la ventana
-        window.addEventListener('mousemove', (e) => {
-            // Usamos requestAnimationFrame para sincronizar el cálculo con el
-            // ciclo de pintado del navegador (60fps fluidos, sin lag de JS)
-            requestAnimationFrame(() => {
-                flashlight.style.setProperty('--x', `${e.clientX}px`);
-                flashlight.style.setProperty('--y', `${e.clientY}px`);
-            });
-        });
-
-        // (Opcional) Ocultar el efecto suavemente si el mouse sale de la ventana
-        document.body.addEventListener('mouseleave', () => {
-            flashlight.style.opacity = '0';
-        });
-        document.body.addEventListener('mouseenter', () => {
-            flashlight.style.opacity = '1';
-        });
-    });
-
-    /* =======================================================
-       IDEA 6: LÓGICA DE INTERSECTION OBSERVER
-       ======================================================= */
-    document.addEventListener('DOMContentLoaded', () => {
-        // Configuramos el observador
-        const observer = new IntersectionObserver((entries, obs) => {
-            entries.forEach(entry => {
-                // Si el elemento entra al viewport (pantalla)
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                    obs.unobserve(entry.target); // Dejamos de observar para que la animación ocurra solo 1 vez
-                }
-            });
-        }, {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.15 // El elemento debe estar 15% visible para detonar
-        });
-
-        // Buscamos todos los elementos con la clase y los ponemos en observación
-        document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
-    });
-</script>
+<script src="./static/js/scripts.js" defer></script>
 </body>
 </html>

@@ -148,20 +148,31 @@ html.dark body::after {
 }
 
 /* =======================================================
-   IDEA 6: MICROINTERACCIONES DE SCROLL
+   IDEA 6: MICROINTERACCIONES DE SCROLL (ANIMACIONES)
    ======================================================= */
+/* Animación base por defecto (Entrada desde abajo) */
 .reveal-on-scroll {
     opacity: 0;
     transform: translateY(40px);
-    transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
-    transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
     will-change: opacity, transform;
 }
 
-.reveal-on-scroll.is-visible {
-    opacity: 1;
-    transform: translateY(0);
+/* Modificadores direccionales (Sobrescriben el eje Y por el eje X) */
+.reveal-on-scroll.reveal-from-left {
+    transform: translateX(-50px);
 }
 
+.reveal-on-scroll.reveal-from-right {
+    transform: translateX(50px);
+}
+
+/* Estado final visible para TODAS las direcciones (resetea los ejes X e Y) */
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* Clases utilitarias de retraso */
 .reveal-delay-100 { transition-delay: 100ms; }
 .reveal-delay-200 { transition-delay: 200ms; }
