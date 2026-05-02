@@ -4,9 +4,8 @@
 
 @layer components {
     /* =======================================
-       MODO CLARO
+       BOTÓN CV (MANTENIDO INTACTO)
        ======================================= */
-    /* Base: Blanco difuminado (Se mantiene igual) */
     .btn-glass-cv {
         @apply relative inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-body font-medium z-20;
         @apply transition-colors duration-300 ease-in-out;
@@ -14,25 +13,73 @@
         box-shadow: 0 4px 15px rgba(176, 0, 124, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.8);
     }
 
-    /* Hover Modo Claro: Fondo #8C1F64 y texto/icono en blanco para contraste perfecto */
     .btn-glass-cv:hover {
         @apply bg-[#8C1F64] border-[#8C1F64] text-white;
         box-shadow: 0 6px 20px rgba(140, 31, 100, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.2);
     }
 
-    /* =======================================
-       MODO OSCURO
-       ======================================= */
-    /* Base: Contenedor de superficie baja (gris/magenta muy oscuro) */
     html.dark .btn-glass-cv {
         @apply bg-dark-surface-container-low/60 border-dark-primary text-dark-primary;
         box-shadow: 0 4px 15px rgba(240, 95, 181, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.1);
     }
 
-    /* Hover Modo Oscuro: Aún más oscuro (apunta al color dark-surface puro) */
     html.dark .btn-glass-cv:hover {
         @apply bg-dark-primary border-dark-outline-variant text-dark-outline-variant;
         box-shadow: 0 4px 20px rgba(240, 95, 181, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+    }
+
+    /* =======================================
+       TARJETAS BENTO: GLASS (CLARO) & HOLLOW (OSCURO)
+       ======================================= */
+    /* Estructura base física compartida */
+    .glass-panel {
+        /* 1. MODO CLARO (Glassmorphism intacto) */
+        @apply relative z-20 rounded-3xl p-8 backdrop-blur-xl border border-white/50 shadow-soft-layered transition-all duration-500 hover:-translate-y-2 hover:shadow-soft-layered-hover;
+
+        /* 2. MODO OSCURO (Preparación Hollow - Anula el cristal y las sombras) */
+        @apply dark:backdrop-blur-none dark:shadow-none dark:hover:shadow-none dark:border-solid;
+    }
+
+    /* 1. Variante Cromática: Género */
+    .glass-panel-secondary {
+        /* Light Mode */
+        @apply bg-secondary-container/60;
+        /* Dark Mode: Transparente, borde definido, hover de color tenue */
+        @apply dark:bg-transparent dark:border-dark-secondary/50 dark:hover:bg-dark-secondary/15;
+    }
+
+    /* 2. Variante Cromática: Divulgación Científica */
+    .glass-panel-surface {
+        @apply bg-surface-container-high/60;
+        @apply dark:bg-transparent dark:border-dark-primary/40 dark:hover:bg-dark-primary/15;
+    }
+
+    /* 3. Variante Cromática: Periodismo */
+    .glass-panel-light {
+        @apply bg-surface-container-lowest/60;
+        @apply dark:bg-transparent dark:border-dark-outline-variant/60 dark:hover:bg-dark-outline-variant/15;
+    }
+
+    /* 4. Variante Cromática: IA Generativa */
+    .glass-panel-gradient {
+        @apply bg-gradient-to-br from-primary-container/60 to-tertiary-container/60;
+        /* Anulamos el gradiente base en Dark Mode y ponemos el borde Hollow */
+        @apply dark:!bg-none dark:bg-transparent dark:border-dark-primary-container/60;
+        /* Al hacer hover, inyectamos un gradiente neón muy sutil */
+        @apply dark:hover:!bg-gradient-to-br dark:hover:from-dark-primary-container/20 dark:hover:to-dark-primary/10;
+    }
+
+    /*
+     * FIX DE CONTRASTE (Solo Modo Oscuro):
+     * Como vaciamos el fondo de la tarjeta IA, el texto original quedaría invisible.
+     * Usamos CSS puro para forzar colores claros sobre la tarjeta hueca.
+     */
+    html.dark .glass-panel-gradient .dark\:text-dark-on-primary {
+        color: theme('colors.dark-on-surface') !important;
+    }
+
+    html.dark .glass-panel-gradient .dark\:text-dark-on-primary\/80 {
+        color: rgba(253, 236, 244, 0.8) !important;
     }
 }
 
