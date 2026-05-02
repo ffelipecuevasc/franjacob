@@ -62,6 +62,11 @@
             </button>
         </div>
     </div>
+    <!-- Barra de Progreso de Lectura con Efecto Neón -->
+    <div id="reading-progress"
+         class="absolute bottom-0 left-0 h-[1.5px] bg-primary dark:bg-dark-primary shadow-[0_0_8px_rgba(176,0,124,0.9)] dark:shadow-[0_0_8px_rgba(240,95,181,0.9)] z-50 transition-colors duration-300"
+         style="width: 0%;">
+    </div>
 </header>
 <main>
     <section class="min-h-[921px] flex items-center pt-32 pb-24 px-8 max-w-7xl mx-auto w-full relative" id="principal">
@@ -71,18 +76,20 @@
                     Periodista Bilingüe<br/>
                     <span class="!text-black dark:!text-dark-primary italic transition-colors duration-300">& Divulgadora Científica</span>
                 </h1>
-                <p class="font-body text-xl md:text-2xl text-on-surface-variant dark:text-dark-on-surface-variant leading-relaxed max-w-xl mb-12 transition-colors duration-300">
-                    Periodista bilingüe con sólida experiencia en <strong>gestión pública</strong>, <strong>coordinación
-                    académica</strong> y <strong>comunicación
-                    institucional</strong>.</br>Especialista en <strong>liderazgo de proyectos de investigación</strong>
-                    en I+D+i y en el cierre de brechas de género.
-                </p>
-                <a class="inline-flex items-center justify-center gap-2 font-body font-medium px-8 py-4 rounded-xl transition-all duration-300 bg-white/40 backdrop-blur-md border border-white/60 text-primary shadow-soft-layered hover:bg-white/70 hover:shadow-soft-layered-hover hover:-translate-y-1 dark:bg-gradient-to-r dark:from-dark-primary dark:to-dark-primary-container dark:text-dark-on-primary dark:border-transparent dark:shadow-none dark:hover:-translate-y-0 dark:hover:opacity-90 relative z-20"
-                   href="./static/CV Francisco Jacob - PERIODISTA.pdf"
-                   download="CV Francisco Jacob - PERIODISTA.pdf">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                        <path fill="currentColor"
-                              d="m12 16l-5-5l1.4-1.45l2.6 2.6V4h2v8.15l2.6-2.6L17 11zm-6 4q-.825 0-1.412-.587T4 18v-3h2v3h12v-3h2v3q0 .825-.587 1.413T18 20z"/>
+                <div class="flex flex-col gap-5 max-w-xl mb-12">
+                    <p class="font-body text-xl md:text-2xl text-on-surface-variant dark:text-dark-on-surface-variant leading-relaxed transition-colors duration-300">
+                        Periodista bilingüe con sólida experiencia en <strong>gestión pública</strong>, <strong>coordinación académica</strong> y <strong>comunicación institucional</strong>.
+                    </p>
+                    <p class="font-body text-xl md:text-2xl text-on-surface-variant dark:text-dark-on-surface-variant leading-relaxed transition-colors duration-300">
+                        Especialista en <strong>liderazgo de proyectos de investigación</strong> en I+D+i y en el cierre de brechas de género.
+                    </p>
+                </div>
+                <a class="btn-glass-cv group"
+                   href="./static/CV Francisca Jacob - PERIODISTA.pdf"
+                   download="CV Francisca Jacob - PERIODISTA.pdf">
+                    <!-- Ícono SVG -->
+                    <svg class="w-5 h-5 transition-transform duration-300 group-hover:scale-110" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="m12 16l-5-5l1.4-1.45l2.6 2.6V4h2v8.15l2.6-2.6L17 11zm-6 4q-.825 0-1.412-.587T4 18v-3h2v3h12v-3h2v3q0 .825-.587 1.413T18 20z"/>
                     </svg>
                     Descargar CV
                 </a>
@@ -412,33 +419,83 @@
 
     <div class="w-full max-w-5xl mx-auto h-px bg-gradient-to-r from-transparent via-primary/20 dark:via-dark-primary/30 to-transparent transition-colors duration-300"></div>
 
-    <section class="py-32 bg-surface dark:bg-dark-surface px-8 transition-colors duration-300" id="habilidades">
-        <div class="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center gap-16">
-            <div class="w-full md:w-1/2 reveal-on-scroll">
-                <div class="relative w-full aspect-square overflow-hidden rounded-full bg-surface-container-low dark:bg-dark-surface-container-low p-8 transition-colors duration-300 dark:shadow-inner-dark">
-                    <div class="w-full h-full rounded-full overflow-hidden">
-                        <img alt="International working environment"
-                             class="w-full h-full object-cover transition-all duration-500"
-                             data-alt="abstract composition of international newspapers, a vintage typewriter, and coffee on a clean wooden desk, soft natural lighting from a window"
-                             src="./static/img/charla.png"/>
+    <section class="py-32 bg-surface dark:bg-dark-surface px-8 transition-colors duration-300 overflow-x-hidden" id="habilidades">
+        <div class="max-w-7xl mx-auto w-full">
+
+            <!-- Encabezado de la Sección -->
+            <div class="mb-16 text-center reveal-on-scroll">
+                <span class="font-label text-sm uppercase tracking-[0.1em] text-secondary dark:text-dark-secondary font-bold mb-4 block transition-colors duration-300">Aptitudes y Competencias</span>
+                <h2 class="font-headline text-4xl md:text-5xl text-on-surface dark:text-dark-on-surface tracking-tight mb-6 transition-colors duration-300 chrome-title">
+                    Habilidades Profesionales</h2>
+                <p class="font-body text-lg text-on-surface-variant dark:text-dark-on-surface-variant leading-relaxed max-w-3xl mx-auto transition-colors duration-300">
+                    Cuento con habilidades clave para mi desarrollo profesional, destacando mis aptitudes en Gestión Pública, Periodismo y Liderazgo en proyectos de Investigación.
+                </p>
+            </div>
+
+            <!-- Bento Grid Container -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-fr">
+
+                <!-- Celda 1: Liderazgo y Gestión Pública (2x2) -->
+                <div class="relative z-20 md:col-span-2 md:row-span-2 rounded-3xl overflow-hidden group shadow-soft-layered hover:shadow-soft-layered-hover dark:shadow-inner-dark transition-all duration-500 reveal-on-scroll reveal-from-left min-h-[350px]">
+                    <img src="./static/img/charla.png" alt="International working environment" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                    <div class="absolute inset-0 p-8 flex flex-col justify-end z-10">
+                        <span class="bg-primary/90 text-white rounded-full px-4 py-1 text-xs font-label uppercase tracking-widest w-max mb-4 backdrop-blur-sm shadow-lg">Liderazgo Institucional</span>
+                        <h3 class="font-headline text-3xl md:text-4xl text-white mb-2 leading-tight">Gestión Pública y de <br>Investigación</h3>
+                        <p class="font-body text-white/80 max-w-md">Capacidad organizativa enfocada en objetivos institucionales y comunicación efectiva en el sector gubernamental.</p>
                     </div>
                 </div>
-            </div>
-            <div class="w-full md:w-1/2 reveal-on-scroll reveal-delay-200">
-                <span class="font-label text-sm uppercase tracking-[0.1em] text-secondary dark:text-dark-secondary font-bold mb-4 block transition-colors duration-300">Aptitudes y Competencias</span>
-                <h2 class="font-headline text-4xl text-on-surface dark:text-dark-on-surface tracking-tight mb-8 transition-colors duration-300 chrome-title">
-                    Habilidades Profesionales</h2>
-                <p class="font-body text-lg text-on-surface-variant dark:text-dark-on-surface-variant leading-[1.8] mb-8 transition-colors duration-300">
-                    Cuento con habilidades clave para mi desarrollo profesional, destacando especialmente mis aptitudes
-                    en Gestión Pública, Periodismo y Liderazgo en proyectos de Investigación. Además, poseo un
-                    amplio conocimiento en temáticas de cierre de brechas de género en Investigación, Desarrollo e
-                    Innovación. Finalmente tengo dominio en el uso de herramientas de IA Generativa.
-                </p>
-                <div class="flex flex-wrap gap-3">
-                    <span class="bg-secondary-container dark:bg-dark-secondary-container text-on-secondary-container dark:text-dark-on-secondary-container rounded-full px-5 py-2 text-sm font-label uppercase tracking-widest transition-colors duration-300">Periodismo</span>
-                    <span class="bg-surface-container-high dark:bg-dark-surface-container-high text-on-surface dark:text-dark-on-surface rounded-full px-5 py-2 text-sm font-label uppercase tracking-widest transition-colors duration-300">Divulgación Científica</span>
-                    <span class="bg-surface-container-high dark:bg-dark-surface-container-high text-on-surface dark:text-dark-on-surface rounded-full px-5 py-2 text-sm font-label uppercase tracking-widest transition-colors duration-300">Especialista en Género</span>
+
+                <!-- Celda 2: Especialista en Género (1x1) -->
+                <div class="relative z-20 md:col-span-1 md:row-span-1 rounded-3xl bg-secondary-container dark:bg-dark-secondary-container p-8 flex flex-col justify-center items-start shadow-soft-layered hover:-translate-y-2 transition-all duration-500 reveal-on-scroll reveal-from-right">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 mb-4 text-on-secondary-container dark:text-dark-on-secondary-container">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                    <h3 class="font-headline text-2xl text-on-secondary-container dark:text-dark-on-secondary-container mb-2">Especialista en Género</h3>
+                    <p class="font-body text-sm text-on-secondary-container/80 dark:text-dark-on-secondary-container/80">Amplio conocimiento en temáticas de cierre de brechas de género en Investigación, Desarrollo e Innovación.</p>
                 </div>
+
+                <!-- Celda 3: Divulgación Científica (1x1) -->
+                <div class="relative z-20 md:col-span-1 md:row-span-1 rounded-3xl bg-surface-container-high dark:bg-dark-surface-container-high p-8 flex flex-col justify-center items-start shadow-soft-layered hover:-translate-y-2 transition-all duration-500 reveal-on-scroll reveal-from-right reveal-delay-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 mb-4 text-primary dark:text-dark-primary">
+                        <path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/>
+                    </svg>
+                    <h3 class="font-headline text-2xl text-on-surface dark:text-dark-on-surface mb-2">Divulgación Científica</h3>
+                    <p class="font-body text-sm text-on-surface-variant dark:text-dark-on-surface-variant">Traducción de hallazgos y conceptos técnicos complejos a un lenguaje accesible y atractivo.</p>
+                </div>
+
+                <!-- Celda 4: Periodismo (1x1) -->
+                <div class="relative z-20 md:col-span-1 md:row-span-1 rounded-3xl bg-surface-container-lowest dark:bg-dark-surface-container-lowest border border-outline-variant/40 dark:border-dark-outline-variant/30 p-8 flex flex-col justify-center items-start shadow-soft-layered hover:-translate-y-2 transition-all duration-500 reveal-on-scroll reveal-from-left">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10 mb-4 text-primary dark:text-dark-primary">
+                        <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+                    </svg>
+                    <h3 class="font-headline text-2xl text-on-surface dark:text-dark-on-surface mb-2">Periodismo</h3>
+                    <p class="font-body text-sm text-on-surface-variant dark:text-dark-on-surface-variant">Vocación comunicadora con experiencia en diseño de estrategias y relaciones con el medio.</p>
+                </div>
+
+                <!-- Celda 5: IA Generativa (2x1) -->
+                <div class="relative z-20 md:col-span-2 md:row-span-1 rounded-3xl bg-gradient-to-br from-primary-container to-tertiary-container dark:from-dark-primary dark:to-dark-primary-container p-8 flex flex-col md:flex-row items-start md:items-center justify-between shadow-soft-layered hover:-translate-y-2 transition-all duration-500 reveal-on-scroll reveal-from-right overflow-hidden group">
+                    <!-- Decorative background element -->
+                    <div class="absolute -right-8 -top-8 opacity-10 transition-transform duration-700 group-hover:rotate-12 group-hover:scale-110 pointer-events-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="text-on-primary-container dark:text-dark-on-primary">
+                            <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/>
+                        </svg>
+                    </div>
+
+                    <div class="relative z-10 w-full">
+                        <div class="flex items-center gap-3 mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-on-primary-container dark:text-dark-on-primary">
+                                <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/>
+                                <path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/>
+                            </svg>
+                            <h3 class="font-headline text-3xl text-on-primary-container dark:text-dark-on-primary">Dominio en IA Generativa</h3>
+                        </div>
+                        <p class="font-body text-base text-on-primary-container/80 dark:text-dark-on-primary/80 max-w-xl mt-2">
+                            Utilización y dominio de herramientas de <strong>Inteligencia Artificial Generativa</strong> para la optimización de flujos de trabajo y la generación de recursos laborales.
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>

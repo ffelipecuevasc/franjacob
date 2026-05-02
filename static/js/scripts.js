@@ -83,3 +83,40 @@ document.addEventListener('DOMContentLoaded', () => {
     // Buscamos todos los elementos con la clase y los ponemos en observación
     document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
 });
+
+    /* =======================================================
+       4. BARRA DE PROGRESO DE LECTURA (NEÓN)
+       ======================================================= */
+const readingProgress = document.getElementById('reading-progress');
+
+if (readingProgress) {
+    let isScrolling = false;
+
+    const updateScrollProgress = () => {
+        // Distancia que el usuario ha scrolleado desde arriba
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+        // Altura total del documento menos la altura visible de la ventana
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+        // Calculamos el porcentaje (de 0 a 100)
+        const progress = (scrollTop / scrollHeight) * 100;
+
+        // Actualizamos el ancho de la barra
+        readingProgress.style.width = `${progress}%`;
+    };
+
+    // Escuchador de evento optimizado para evitar cuellos de botella (Jank)
+    window.addEventListener('scroll', () => {
+        if (!isScrolling) {
+            window.requestAnimationFrame(() => {
+                updateScrollProgress();
+                isScrolling = false;
+            });
+            isScrolling = true;
+        }
+    });
+
+    // Forzamos el cálculo inicial por si la página se recarga a la mitad
+    updateScrollProgress();
+}

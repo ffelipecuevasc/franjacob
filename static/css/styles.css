@@ -2,6 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    /* =======================================
+       MODO CLARO
+       ======================================= */
+    /* Base: Blanco difuminado (Se mantiene igual) */
+    .btn-glass-cv {
+        @apply relative inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-body font-medium z-20;
+        @apply transition-colors duration-300 ease-in-out;
+        @apply bg-white/40 backdrop-blur-md border border-white/60 text-primary;
+        box-shadow: 0 4px 15px rgba(176, 0, 124, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.8);
+    }
+
+    /* Hover Modo Claro: Fondo #8C1F64 y texto/icono en blanco para contraste perfecto */
+    .btn-glass-cv:hover {
+        @apply bg-[#8C1F64] border-[#8C1F64] text-white;
+        box-shadow: 0 6px 20px rgba(140, 31, 100, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+    }
+
+    /* =======================================
+       MODO OSCURO
+       ======================================= */
+    /* Base: Contenedor de superficie baja (gris/magenta muy oscuro) */
+    html.dark .btn-glass-cv {
+        @apply bg-dark-surface-container-low/60 border-dark-primary text-dark-primary;
+        box-shadow: 0 4px 15px rgba(240, 95, 181, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    }
+
+    /* Hover Modo Oscuro: Aún más oscuro (apunta al color dark-surface puro) */
+    html.dark .btn-glass-cv:hover {
+        @apply bg-dark-primary border-dark-outline-variant text-dark-outline-variant;
+        box-shadow: 0 4px 20px rgba(240, 95, 181, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+    }
+}
+
 /* Estilos extraídos de la etiqueta <style> del HTML */
 
 .material-symbols-outlined {
