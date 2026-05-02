@@ -120,3 +120,41 @@ if (readingProgress) {
     // Forzamos el cálculo inicial por si la página se recarga a la mitad
     updateScrollProgress();
 }
+
+/* =======================================================
+   5. NAVEGACIÓN SUAVE (SMOOTH SCROLL) CON OFFSET
+   ======================================================= */
+// Seleccionamos todos los enlaces que comiencen con "#"
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        // Prevenimos el salto brusco nativo de HTML
+        e.preventDefault();
+
+        // Obtenemos el ID del destino (quitando el "#")
+        const targetId = this.getAttribute('href').substring(1);
+
+        // Evitamos errores si el enlace es solo "#" (como el logo que sube arriba)
+        if (!targetId) {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            return;
+        }
+
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+            // Buscamos tu header flotante para medir su altura exacta
+            const header = document.querySelector('header');
+            const headerHeight = header ? header.offsetHeight : 0;
+
+            // Calculamos la posición real sumando el scroll actual y restando el header
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+
+            // Ejecutamos el desplazamiento suave nativo
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
