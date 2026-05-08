@@ -257,3 +257,69 @@ html.dark body::after {
 /* Clases utilitarias de retraso */
 .reveal-delay-100 { transition-delay: 100ms; }
 .reveal-delay-200 { transition-delay: 200ms; }
+
+/* =======================================================
+   SLIDER CINEMÁTICO (HERO SECTION)
+   ======================================================= */
+/* 1. Clase base:
+  will-change le avisa al navegador que optimice estos atributos en la GPU para 60fps.
+  Duración total del ciclo: 7.5 segundos (3 imágenes x 2.5s cada fase).
+*/
+.cinematic-img {
+    opacity: 0;
+    transform: scale(1);
+    will-change: transform, opacity, filter;
+    animation: cinematicZoom 7.5s infinite;
+}
+
+/* 2. Delays (Desfase):
+  Separamos cada imagen por 2.5 segundos para crear la secuencia.
+*/
+.cinematic-img.img-1 { animation-delay: 0s; }
+.cinematic-img.img-2 { animation-delay: 2.5s; }
+.cinematic-img.img-3 { animation-delay: 5.0s; }
+
+/* 3. Keyframes (Matemática de la transición):
+  - 0% a 13.33% (1 seg): Entrada con Fade In y perdiendo el Blur.
+  - 13.33% a 33.33% (1.5 seg): Imagen 100% visible, haciendo zoom lento.
+  - 33.33% a 46.66% (1 seg): Salida con Fade Out y sumando Blur.
+  - 46.66% a 100% (3.5 seg): Imagen oculta esperando su siguiente turno.
+*/
+@keyframes cinematicZoom {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+        filter: blur(8px);
+    }
+    13.33% {
+        opacity: 1;
+        transform: scale(1.03);
+        filter: blur(0px);
+    }
+    33.33% {
+        opacity: 1;
+        transform: scale(1.08);
+        filter: blur(0px);
+    }
+    46.66% {
+        opacity: 0;
+        transform: scale(1.12);
+        filter: blur(8px);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.12);
+        filter: blur(8px);
+    }
+}
+
+/* Accesibilidad: Apagar animación si el usuario prefiere movimiento reducido en su SO */
+@media (prefers-reduced-motion: reduce) {
+    .cinematic-img {
+        animation: none;
+        opacity: 0;
+    }
+    .cinematic-img.img-1 {
+        opacity: 1; /* Muestra solo la primera imagen de forma estática */
+    }
+}
