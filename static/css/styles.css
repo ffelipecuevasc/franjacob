@@ -33,10 +33,10 @@
        ======================================= */
     /* Estructura base física compartida */
     .glass-panel {
-        /* 1. MODO CLARO (Glassmorphism intacto) */
-        @apply relative z-20 rounded-3xl p-8 backdrop-blur-xl border border-white/50 shadow-soft-layered transition-all duration-500 hover:-translate-y-2 hover:shadow-soft-layered-hover;
+        /* 1. MODO CLARO (Glassmorphism intacto + Efecto de Escalado + Padding ajustado a p-6) */
+        @apply relative z-20 rounded-3xl p-6 backdrop-blur-xl border border-white/50 shadow-soft-layered transition-all duration-500 hover:-translate-y-2 hover:scale-105 hover:z-30 hover:shadow-soft-layered-hover;
 
-        /* 2. MODO OSCURO (Preparación Hollow - Anula el cristal y las sombras) */
+        /* 2. MODO OSCURO (Preparación Hollow) */
         @apply dark:backdrop-blur-none dark:shadow-none dark:hover:shadow-none dark:border-solid;
     }
 
@@ -67,6 +67,12 @@
         @apply dark:!bg-none dark:bg-transparent dark:border-dark-primary-container/60;
         /* Al hacer hover, inyectamos un gradiente neón muy sutil */
         @apply dark:hover:!bg-gradient-to-br dark:hover:from-dark-primary-container/20 dark:hover:to-dark-primary/10;
+    }
+
+    /* 5. Variante Cromática: Gestión Pública (NUEVA) */
+    .glass-panel-primary {
+        @apply bg-primary-container/40;
+        @apply dark:bg-transparent dark:border-dark-primary-container/50 dark:hover:bg-dark-primary-container/15;
     }
 
     /*
@@ -257,6 +263,8 @@ html.dark body::after {
 /* Clases utilitarias de retraso */
 .reveal-delay-100 { transition-delay: 100ms; }
 .reveal-delay-200 { transition-delay: 200ms; }
+.reveal-delay-300 { transition-delay: 300ms; }
+.reveal-delay-400 { transition-delay: 400ms; }
 
 /* =======================================================
    SLIDER CINEMÁTICO (HERO SECTION)
@@ -321,5 +329,47 @@ html.dark body::after {
     }
     .cinematic-img.img-1 {
         opacity: 1; /* Muestra solo la primera imagen de forma estática */
+    }
+}
+
+/* =======================================================
+   MARQUEE INFINITO (HITOS PROFESIONALES)
+   ======================================================= */
+/* El motor base de la animación */
+.animate-marquee {
+    /* 40 segundos es un tiempo ideal para que sea legible sin marear */
+    animation: marquee 40s linear infinite;
+    /* Optimización de hardware para que la GPU procese el movimiento a 60fps fijos */
+    will-change: transform;
+}
+
+/* Pausar la cinta cuando el usuario pasa el mouse sobre el contenedor (la clase .group en el HTML) */
+.group:hover .animate-marquee {
+    animation-play-state: paused;
+}
+
+/* La matemática del bucle perfecto */
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Desplazamiento exacto hacia la copia clonada, compensando el gap-6 (1.5rem) */
+        transform: translateX(calc(-50% - 0.75rem));
+    }
+}
+
+/* Accesibilidad: Apagar animación si el usuario prefiere movimiento reducido en su SO */
+@media (prefers-reduced-motion: reduce) {
+    .animate-marquee {
+        animation: none;
+    }
+    /* Permitir scroll manual si el usuario tiene las animaciones desactivadas */
+    #hitos .flex.overflow-x-hidden {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+    }
+    #hitos article {
+        scroll-snap-align: start;
     }
 }

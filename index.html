@@ -53,6 +53,10 @@
             <a class="font-headline font-medium text-lg tracking-tight text-on-surface hover:text-primary dark:text-dark-on-surface dark:hover:text-dark-primary transition-colors duration-300 active:opacity-70"
                href="#experiencia">Experiencia</a>
             <a class="font-headline font-medium text-lg tracking-tight text-on-surface hover:text-primary dark:text-dark-on-surface dark:hover:text-dark-primary transition-colors duration-300 active:opacity-70"
+               href="#habilidades">Habilidades</a>
+            <a class="font-headline font-medium text-lg tracking-tight text-on-surface hover:text-primary dark:text-dark-on-surface dark:hover:text-dark-primary transition-colors duration-300 active:opacity-70"
+               href="#hitos">Hitos</a>
+            <a class="font-headline font-medium text-lg tracking-tight text-on-surface hover:text-primary dark:text-dark-on-surface dark:hover:text-dark-primary transition-colors duration-300 active:opacity-70"
                href="#contacto">Contacto</a>
         </nav>
         <div class="flex items-center gap-4">
@@ -102,9 +106,15 @@
                 <div class="absolute -inset-4 bg-surface-container-low dark:bg-dark-surface-container-low rounded-xl transform rotate-2 z-0 transition-colors duration-300"></div>
                 <div class="relative z-10 w-full aspect-[4/5] overflow-hidden rounded-md bg-surface-variant dark:bg-dark-surface-variant transition-all duration-500 shadow-soft-layered hover:shadow-soft-layered-hover dark:shadow-none dark:ring-1 dark:ring-transparent dark:hover:ring-dark-primary dark:hover:shadow-neon-glow">
 
-                    <img alt="Francisca Jacob - Retrato 1" class="cinematic-img img-1 absolute inset-0 w-full h-full object-cover object-center pointer-events-none" src="./static/img/francisca.png"/>
-                    <img alt="Francisca Jacob - Retrato 2" class="cinematic-img img-2 absolute inset-0 w-full h-full object-cover object-center pointer-events-none" src="./static/img/francisca2.png"/>
-                    <img alt="Francisca Jacob - Retrato 3" class="cinematic-img img-3 absolute inset-0 w-full h-full object-cover object-center pointer-events-none" src="./static/img/francisca3.png"/>
+                    <img alt="Francisca Jacob - Retrato 1"
+                         class="cinematic-img img-1 absolute inset-0 w-full h-full object-cover object-center pointer-events-none"
+                         src="static/img/francisca1.png"/>
+                    <img alt="Francisca Jacob - Retrato 2"
+                         class="cinematic-img img-2 absolute inset-0 w-full h-full object-cover object-center pointer-events-none"
+                         src="./static/img/francisca2.png"/>
+                    <img alt="Francisca Jacob - Retrato 3"
+                         class="cinematic-img img-3 absolute inset-0 w-full h-full object-cover object-center pointer-events-none"
+                         src="./static/img/francisca3.png"/>
 
                 </div>
             </div>
@@ -113,7 +123,9 @@
 
     <div class="w-full max-w-5xl mx-auto h-px bg-gradient-to-r from-transparent via-primary/20 dark:via-dark-primary/30 to-transparent transition-colors duration-300"></div>
 
-    <section class="py-32 bg-surface-container-low dark:bg-dark-surface-container-low px-8 transition-colors duration-300" id="sobre-mi">
+    <section
+            class="py-32 bg-surface-container-low dark:bg-dark-surface-container-low px-8 transition-colors duration-300"
+            id="sobre-mi">
         <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-16">
             <div class="lg:col-span-4 flex flex-col justify-start">
                 <span class="font-label text-sm uppercase tracking-[0.1em] text-secondary dark:text-dark-secondary font-bold mb-4 transition-colors duration-300">Sobre Mí</span>
@@ -266,7 +278,9 @@
 
     <div class="w-full max-w-5xl mx-auto h-px bg-gradient-to-r from-transparent via-primary/20 dark:via-dark-primary/30 to-transparent transition-colors duration-300"></div>
 
-    <section class="py-32 bg-surface-container-low dark:bg-dark-surface-container-low px-8 transition-colors duration-300 overflow-x-hidden" id="experiencia">
+    <section
+            class="py-32 bg-surface-container-low dark:bg-dark-surface-container-low px-8 transition-colors duration-300 overflow-x-hidden"
+            id="experiencia">
         <div class="max-w-7xl mx-auto w-full">
 
             <!-- Título con efecto de entrada desde abajo (base) -->
@@ -478,107 +492,316 @@
                 </p>
             </div>
 
-            <!-- Bento Grid Container -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-fr">
+            <!-- Contenedores de 5 habilidades -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
 
-                <!-- Celda 1: Liderazgo y Gestión Pública (2x2) -->
-                <div class="relative z-20 md:col-span-2 md:row-span-2 rounded-3xl overflow-hidden group shadow-soft-layered hover:shadow-soft-layered-hover dark:shadow-inner-dark transition-all duration-500 reveal-on-scroll reveal-from-left min-h-[350px]">
-                    <img src="./static/img/charla.png" alt="International working environment"
-                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-                    <div class="absolute inset-0 p-8 flex flex-col justify-end z-10">
-                        <span class="bg-primary/90 text-white rounded-full px-4 py-1 text-xs font-label uppercase tracking-widest w-max mb-4 backdrop-blur-sm shadow-lg">Liderazgo Institucional</span>
-                        <h3 class="font-headline text-3xl md:text-4xl text-white mb-2 leading-tight">Gestión Pública y
-                            de <br>Investigación</h3>
-                        <p class="font-body text-white/80 max-w-md">Capacidad organizativa enfocada en objetivos
-                            institucionales y comunicación efectiva en el sector gubernamental.</p>
-                    </div>
-                </div>
-
-                <!-- Celda 2: Especialista en Género (1x1) -->
-                <div class="md:col-span-1 md:row-span-1 flex flex-col justify-center items-start reveal-on-scroll reveal-from-right glass-panel glass-panel-secondary">
-                    <!-- Ícono "Coordinadora Proyecto InES Género" -->
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                         class="w-10 h-10 mb-4 text-on-secondary-container dark:text-dark-on-secondary-container transition-colors duration-300">
-                        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                           stroke-width="1.5">
-                            <path d="M11.566 1.017a.486.486 0 0 1 .868 0l1.009 2.034a.48.48 0 0 0 .363.262l2.264.327a.48.48 0 0 1 .389.323a.47.47 0 0 1-.121.487L14.7 6.044a.47.47 0 0 0-.138.419l.388 2.247a.47.47 0 0 1-.194.465a.49.49 0 0 1-.509.035l-2.021-1.054a.48.48 0 0 0-.452 0L9.758 9.21a.487.487 0 0 1-.673-.24a.5.5 0 0 1-.03-.26l.388-2.247a.47.47 0 0 0-.138-.42L7.662 4.45a.47.47 0 0 1 .028-.704a.5.5 0 0 1 .24-.106l2.264-.327a.48.48 0 0 0 .363-.262zM6.322 10.1l-.863-.45a.49.49 0 0 0-.453 0L2.991 10.7a.49.49 0 0 1-.51-.034a.47.47 0 0 1-.193-.466l.387-2.246a.47.47 0 0 0-.137-.419L.894 5.945a.472.472 0 0 1 .029-.705a.5.5 0 0 1 .24-.106l2.263-.327a.48.48 0 0 0 .364-.262L4.8 2.511a.48.48 0 0 1 .434-.267M17.678 10.1l.863-.45a.49.49 0 0 1 .453 0l2.015 1.05a.49.49 0 0 0 .51-.034a.47.47 0 0 0 .193-.466l-.387-2.246a.47.47 0 0 1 .137-.419l1.644-1.595a.47.47 0 0 0-.029-.704a.5.5 0 0 0-.24-.106l-2.263-.327a.48.48 0 0 1-.364-.262l-1.01-2.03a.48.48 0 0 0-.434-.267M7.877 15.447v1a5.9 5.9 0 0 1-.86 3.272m9.107-4.272v1a5.9 5.9 0 0 0 .859 3.272m-9.095-4.054A5.48 5.48 0 0 0 12 13.766a5.48 5.48 0 0 0 4.112 1.9"/>
-                            <path d="M7.875 15.336a4.125 4.125 0 1 0 8.25 0a4.125 4.125 0 0 0-8.25 0m9.172 7.914a6.8 6.8 0 0 0-2.54-1.8L12 23.211l-2.507-1.757a6.8 6.8 0 0 0-2.53 1.784"/>
-                        </g>
-                    </svg>
-                    <h3 class="font-headline text-2xl text-on-secondary-container dark:text-dark-on-secondary-container mb-2">
-                        Especialista en Género</h3>
-                    <p class="font-body text-sm text-on-secondary-container/80 dark:text-dark-on-secondary-container/80">
-                        Amplio conocimiento en temáticas de cierre de brechas de género en Investigación, Desarrollo e
-                        Innovación.</p>
-                </div>
-
-                <!-- Celda 3: Divulgación Científica (1x1) -->
-                <div class="md:col-span-1 md:row-span-1 flex flex-col justify-center items-start reveal-on-scroll reveal-from-right reveal-delay-100 glass-panel glass-panel-surface">
-                    <!-- Ícono "Divulgadora Científica" -->
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                         class="w-10 h-10 mb-4 text-primary dark:text-dark-primary transition-colors duration-300">
-                        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                           stroke-width="1.5">
-                            <path d="M9.759 12.009a2.25 2.25 0 1 0 4.5 0a2.25 2.25 0 0 0-4.5 0"/>
-                            <path d="M1.403 22.616c.984.985 3.046.812 5.731-.481s5.775-3.6 8.588-6.413s5.12-5.902 6.412-8.587c1.293-2.686 1.466-4.747.482-5.732c-.985-.984-3.046-.811-5.732.482c-2.685 1.293-5.774 3.6-8.587 6.412c-2.813 2.813-5.12 5.902-6.413 8.588s-1.466 4.747-.481 5.731"/>
-                            <path d="M8.297 15.722a40 40 0 0 0 4.341 3.777c1.474 1.1 2.917 1.996 4.246 2.636s2.52 1.012 3.504 1.095c.983.082 1.74-.126 2.228-.614c.487-.487.696-1.244.613-2.228c-.082-.983-.455-2.174-1.095-3.503s-1.536-2.773-2.636-4.246a40 40 0 0 0-3.776-4.342a40 40 0 0 0-4.342-3.776c-1.473-1.1-2.916-1.996-4.246-2.636S4.614.872 3.631.79s-1.74.126-2.228.613C.915 1.891.707 2.648.789 3.631c.083.984.455 2.174 1.095 3.504S3.42 9.907 4.521 11.38a40 40 0 0 0 3.776 4.341"/>
-                        </g>
-                    </svg>
-                    <h3 class="font-headline text-2xl text-on-surface dark:text-dark-on-surface mb-2">Divulgación
-                        Científica</h3>
-                    <p class="font-body text-sm text-on-surface-variant dark:text-dark-on-surface-variant">Traducción de
-                        hallazgos y conceptos técnicos complejos a un lenguaje accesible y atractivo.</p>
-                </div>
-
-                <!-- Celda 4: Periodismo (1x1) -->
-                <div class="md:col-span-1 md:row-span-1 flex flex-col justify-center items-start reveal-on-scroll reveal-from-left glass-panel glass-panel-light">
-                    <!-- Ícono "Periodismo" -->
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                         class="w-10 h-10 mb-4 text-primary dark:text-dark-primary transition-colors duration-300">
-                        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                           stroke-width="1.5">
-                            <path d="M5.076 17C4.089 4.545 12.912 1.012 19.973 2.224c.286 4.128-1.734 5.673-5.58 6.387c.742.776 2.055 1.753 1.913 2.974c-.1.868-.69 1.295-1.87 2.147C11.85 15.6 8.854 16.78 5.076 17"/>
-                            <path d="M4 22c0-6.5 3.848-9.818 6.5-12"/>
-                        </g>
-                    </svg>
-                    <h3 class="font-headline text-2xl text-on-surface dark:text-dark-on-surface mb-2">Periodismo</h3>
-                    <p class="font-body text-sm text-on-surface-variant dark:text-dark-on-surface-variant">Vocación
-                        comunicadora con experiencia en diseño de estrategias y relaciones con el medio.</p>
-                </div>
-
-                <!-- Celda 5: IA Generativa (2x1) -->
-                <div class="md:col-span-2 md:row-span-1 flex flex-col md:flex-row items-start md:items-center justify-between overflow-hidden group reveal-on-scroll reveal-from-right glass-panel glass-panel-gradient">
-                    <!-- Decorative background element -->
-                    <div class="absolute -right-8 -top-8 opacity-10 transition-transform duration-700 group-hover:rotate-12 group-hover:scale-110 pointer-events-none">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 24 24" fill="none"
-                             stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
-                             class="text-on-primary-container dark:text-dark-on-primary">
-                            <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/>
+                <div class="relative z-20 hover:z-30 reveal-on-scroll h-full">
+                    <div class="relative z-20 w-full h-full flex flex-col justify-start items-center text-center glass-panel glass-panel-primary text-primary dark:text-dark-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                             class="w-10 h-10 mb-5">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                               stroke-width="1.5">
+                                <path d="M23.25 23.25H.75m0 0V1.75c0-.6.4-1 1-1h14c.6 0 1 .4 1 1v21.5m0-13h5.5c.6 0 1 .4 1 1v12"/>
+                                <path d="M7 3.75H4v4h3zm6.5 0h-3v4h3zM7 11.25H4v4h3zm6.5 0h-3v4h3zm-6.55 12v-3.3c0-1 .8-1.8 1.8-1.8s1.8.8 1.8 1.8v3.3"/>
+                            </g>
                         </svg>
+                        <h3 class="font-headline text-xl mb-3 leading-tight">Gestión
+                            Pública y de Investigación</h3>
+                        <p class="font-body text-xs">Capacidad organizativa enfocada en
+                            objetivos y comunicación gubernamental.</p>
                     </div>
+                </div>
 
-                    <div class="relative z-10 w-full">
-                        <div class="flex items-center gap-3 mb-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                 stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                                 class="w-8 h-8 text-on-primary-container dark:text-dark-on-primary">
+                <div class="relative z-20 hover:z-30 reveal-on-scroll reveal-delay-100 h-full">
+                    <div class="relative z-20 w-full h-full flex flex-col justify-start items-center text-center glass-panel glass-panel-secondary text-on-secondary-container dark:text-dark-secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                             class="w-10 h-10 mb-5">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                               stroke-width="1.5">
+                                <path d="M11.566 1.017a.486.486 0 0 1 .868 0l1.009 2.034a.48.48 0 0 0 .363.262l2.264.327a.48.48 0 0 1 .389.323a.47.47 0 0 1-.121.487L14.7 6.044a.47.47 0 0 0-.138.419l.388 2.247a.47.47 0 0 1-.194.465a.49.49 0 0 1-.509.035l-2.021-1.054a.48.48 0 0 0-.452 0L9.758 9.21a.487.487 0 0 1-.673-.24a.5.5 0 0 1-.03-.26l.388-2.247a.47.47 0 0 0-.138-.42L7.662 4.45a.47.47 0 0 1 .028-.704a.5.5 0 0 1 .24-.106l2.264-.327a.48.48 0 0 0 .363-.262zM6.322 10.1l-.863-.45a.49.49 0 0 0-.453 0L2.991 10.7a.49.49 0 0 1-.51-.034a.47.47 0 0 1-.193-.466l.387-2.246a.47.47 0 0 0-.137-.419L.894 5.945a.472.472 0 0 1 .029-.705a.5.5 0 0 1 .24-.106l2.263-.327a.48.48 0 0 0 .364-.262L4.8 2.511a.48.48 0 0 1 .434-.267M17.678 10.1l.863-.45a.49.49 0 0 1 .453 0l2.015 1.05a.49.49 0 0 0 .51-.034a.47.47 0 0 0 .193-.466l-.387-2.246a.47.47 0 0 1 .137-.419l1.644-1.595a.47.47 0 0 0-.029-.704a.5.5 0 0 0-.24-.106l-2.263-.327a.48.48 0 0 1-.364-.262l-1.01-2.03a.48.48 0 0 0-.434-.267M7.877 15.447v1a5.9 5.9 0 0 1-.86 3.272m9.107-4.272v1a5.9 5.9 0 0 0 .859 3.272m-9.095-4.054A5.48 5.48 0 0 0 12 13.766a5.48 5.48 0 0 0 4.112 1.9"/>
+                                <path d="M7.875 15.336a4.125 4.125 0 1 0 8.25 0a4.125 4.125 0 0 0-8.25 0m9.172 7.914a6.8 6.8 0 0 0-2.54-1.8L12 23.211l-2.507-1.757a6.8 6.8 0 0 0-2.53 1.784"/>
+                            </g>
+                        </svg>
+                        <h3 class="font-headline text-xl mb-3 leading-tight">Especialista
+                            en Género</h3>
+                        <p class="font-body text-xs">Cierre de brechas de género en
+                            Investigación, Desarrollo e Innovación.</p>
+                    </div>
+                </div>
+
+                <div class="relative z-20 hover:z-30 reveal-on-scroll reveal-delay-200 h-full">
+                    <div class="relative z-20 w-full h-full flex flex-col justify-start items-center text-center glass-panel glass-panel-surface text-secondary dark:text-dark-on-surface-variant">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                             class="w-10 h-10 mb-5">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                               stroke-width="1.5">
+                                <path d="M9.759 12.009a2.25 2.25 0 1 0 4.5 0a2.25 2.25 0 0 0-4.5 0"/>
+                                <path d="M1.403 22.616c.984.985 3.046.812 5.731-.481s5.775-3.6 8.588-6.413s5.12-5.902 6.412-8.587c1.293-2.686 1.466-4.747.482-5.732c-.985-.984-3.046-.811-5.732.482c-2.685 1.293-5.774 3.6-8.587 6.412c-2.813 2.813-5.12 5.902-6.413 8.588s-1.466 4.747-.481 5.731"/>
+                                <path d="M8.297 15.722a40 40 0 0 0 4.341 3.777c1.474 1.1 2.917 1.996 4.246 2.636s2.52 1.012 3.504 1.095c.983.082 1.74-.126 2.228-.614c.487-.487.696-1.244.613-2.228c-.082-.983-.455-2.174-1.095-3.503s-1.536-2.773-2.636-4.246a40 40 0 0 0-3.776-4.342a40 40 0 0 0-4.342-3.776c-1.473-1.1-2.916-1.996-4.246-2.636S4.614.872 3.631.79s-1.74.126-2.228.613C.915 1.891.707 2.648.789 3.631c.083.984.455 2.174 1.095 3.504S3.42 9.907 4.521 11.38a40 40 0 0 0 3.776 4.341"/>
+                            </g>
+                        </svg>
+                        <h3 class="font-headline text-xl mb-3 leading-tight">Divulgación
+                            Científica</h3>
+                        <p class="font-body text-xs">Traducción de hallazgos complejos a
+                            un lenguaje accesible y atractivo.</p>
+                    </div>
+                </div>
+
+                <div class="relative z-20 hover:z-30 reveal-on-scroll reveal-delay-300 h-full">
+                    <div class="relative z-20 w-full h-full flex flex-col justify-start items-center text-center glass-panel glass-panel-light text-on-surface dark:text-dark-on-surface">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                             class="w-10 h-10 mb-5">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                               stroke-width="1.5">
+                                <path d="M5.076 17C4.089 4.545 12.912 1.012 19.973 2.224c.286 4.128-1.734 5.673-5.58 6.387c.742.776 2.055 1.753 1.913 2.974c-.1.868-.69 1.295-1.87 2.147C11.85 15.6 8.854 16.78 5.076 17"/>
+                                <path d="M4 22c0-6.5 3.848-9.818 6.5-12"/>
+                            </g>
+                        </svg>
+                        <h3 class="font-headline text-xl mb-3 leading-tight">
+                            Periodismo</h3>
+                        <p class="font-body text-xs">Vocación comunicadora estratégica y
+                            relaciones con el medio.</p>
+                    </div>
+                </div>
+
+                <div class="relative z-20 hover:z-30 reveal-on-scroll reveal-delay-400 h-full">
+                    <div class="relative z-20 w-full h-full flex flex-col justify-start items-center text-center glass-panel glass-panel-gradient group text-on-primary-fixed dark:text-dark-primary-container">
+                        <div class="absolute -right-8 -top-8 opacity-10 transition-transform duration-700 group-hover:rotate-12 group-hover:scale-110 pointer-events-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+                                 stroke-linejoin="round" class="text-on-primary-container dark:text-dark-on-primary">
                                 <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/>
-                                <path d="M20 3v4"/>
-                                <path d="M22 5h-4"/>
-                                <path d="M4 17v2"/>
-                                <path d="M5 18H3"/>
                             </svg>
-                            <h3 class="font-headline text-3xl text-on-primary-container dark:text-dark-on-primary">
-                                Dominio en IA Generativa</h3>
                         </div>
-                        <p class="font-body text-base text-on-primary-container/80 dark:text-dark-on-primary/80 max-w-xl mt-2">
-                            Utilización y dominio de herramientas de <strong>Inteligencia Artificial Generativa</strong>
-                            para la optimización de flujos de trabajo y la generación de recursos laborales.
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                             stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                             class="w-10 h-10 mb-5 relative z-10">
+                            <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/>
+                            <path d="M20 3v4"/>
+                            <path d="M22 5h-4"/>
+                            <path d="M4 17v2"/>
+                            <path d="M5 18H3"/>
+                        </svg>
+                        <h3 class="font-headline text-xl mb-3 leading-tight relative z-10">
+                            Dominio en IA Generativa</h3>
+                        <p class="font-body text-xs relative z-10">Optimización de flujos
+                            de trabajo y generación de recursos.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="w-full max-w-5xl mx-auto h-px bg-gradient-to-r from-transparent via-primary/20 dark:via-dark-primary/30 to-transparent transition-colors duration-300"></div>
+
+    <section
+            class="py-32 bg-surface-container-low dark:bg-dark-surface-container-low transition-colors duration-300 overflow-hidden relative"
+            id="hitos">
+
+        <div class="max-w-7xl mx-auto px-8 mb-16 text-center reveal-on-scroll">
+            <span class="font-label text-sm uppercase tracking-[0.1em] text-secondary dark:text-dark-secondary font-bold mb-4 block transition-colors duration-300">Registro en Terreno</span>
+            <h2 class="font-headline text-4xl md:text-5xl text-on-surface dark:text-dark-on-surface tracking-tight mb-6 transition-colors duration-300 chrome-title">
+                Hitos Profesionales
+            </h2>
+            <p class="font-body text-lg text-on-surface-variant dark:text-dark-on-surface-variant leading-relaxed max-w-3xl mx-auto transition-colors duration-300">
+                Galería de mis hitos profesionales y participaciones importantes que he tenido en mi carrera.
+            </p>
+        </div>
+
+        <div class="relative w-full flex overflow-x-hidden group py-12">
+
+            <div class="marquee-track animate-marquee flex gap-6 w-max px-3">
+
+                <article
+                        class="relative w-[320px] md:w-[380px] shrink-0 glass-panel glass-panel-surface !p-0 overflow-hidden transition-all duration-500 cursor-pointer">
+                    <div class="w-full h-56 overflow-hidden bg-surface-variant dark:bg-dark-surface-variant relative group/img">
+                        <img src="./static/img/10.png" alt="Meganoticias"
+                             class="w-full h-full object-cover grayscale opacity-80 group-hover/img:grayscale-0 group-hover/img:opacity-100 group-hover/img:scale-110 transition-all duration-700">
+                    </div>
+                    <div class="p-6">
+                        <span class="font-label text-xs uppercase tracking-widest text-outline dark:text-dark-outline mb-2 block">Santiago • 2023</span>
+                        <h3 class="font-headline text-xl text-on-surface dark:text-dark-on-surface mb-3 leading-tight">
+                            Difusión científica en Meganoticias</h3>
+                        <p class="font-body text-sm text-on-surface-variant dark:text-dark-on-surface-variant line-clamp-3">
+                            Participé desde Meganoticias en la difusión nacional de SAPeCCT Chile, fortaleciendo la comunicación entre ciencia y medios.
                         </p>
                     </div>
-                </div>
+                </article>
 
+                <article
+                        class="relative w-[320px] md:w-[380px] shrink-0 glass-panel glass-panel-surface !p-0 overflow-hidden transition-all duration-500 cursor-pointer">
+                    <div class="w-full h-56 overflow-hidden bg-surface-variant dark:bg-dark-surface-variant relative group/img">
+                        <img src="./static/img/9.png" alt="SAPeCCT"
+                             class="w-full h-full object-cover grayscale opacity-80 group-hover/img:grayscale-0 group-hover/img:opacity-100 group-hover/img:scale-110 transition-all duration-700">
+                    </div>
+                    <div class="p-6">
+                        <span class="font-label text-xs uppercase tracking-widest text-outline dark:text-dark-outline mb-2 block">Santiago • 2023</span>
+                        <h3 class="font-headline text-xl text-on-surface dark:text-dark-on-surface mb-3 leading-tight">
+                            Moderación en SAPeCCT Chile</h3>
+                        <p class="font-body text-sm text-on-surface-variant dark:text-dark-on-surface-variant line-clamp-3">
+                            Moderé un panel sobre comunicación científica y gestión de crisis junto a expertos nacionales e internacionales.
+                        </p>
+                    </div>
+                </article>
+
+                <article
+                        class="relative w-[320px] md:w-[380px] shrink-0 glass-panel glass-panel-surface !p-0 overflow-hidden transition-all duration-500 cursor-pointer">
+                    <div class="w-full h-56 overflow-hidden bg-surface-variant dark:bg-dark-surface-variant relative group/img">
+                        <img src="./static/img/8.png" alt="Puerto de Ideas"
+                             class="w-full h-full object-cover grayscale opacity-80 group-hover/img:grayscale-0 group-hover/img:opacity-100 group-hover/img:scale-110 transition-all duration-700">
+                    </div>
+                    <div class="p-6">
+                        <span class="font-label text-xs uppercase tracking-widest text-outline dark:text-dark-outline mb-2 block">Antofagasta • 2024</span>
+                        <h3 class="font-headline text-xl text-on-surface dark:text-dark-on-surface mb-3 leading-tight">
+                            Divulgación astronómica</h3>
+                        <p class="font-body text-sm text-on-surface-variant dark:text-dark-on-surface-variant line-clamp-3">
+                            Difundí una actividad científica sobre el telescopio más grande del mundo durante Puerto de Ideas 2024.
+                        </p>
+                    </div>
+                </article>
+
+                <article
+                        class="relative w-[320px] md:w-[380px] shrink-0 glass-panel glass-panel-surface !p-0 overflow-hidden transition-all duration-500 cursor-pointer">
+                    <div class="w-full h-56 overflow-hidden bg-surface-variant dark:bg-dark-surface-variant relative group/img">
+                        <img src="./static/img/7.png" alt="Magistral"
+                             class="w-full h-full object-cover grayscale opacity-80 group-hover/img:grayscale-0 group-hover/img:opacity-100 group-hover/img:scale-110 transition-all duration-700">
+                    </div>
+                    <div class="p-6">
+                        <span class="font-label text-xs uppercase tracking-widest text-outline dark:text-dark-outline mb-2 block">Antofagasta • 2024</span>
+                        <h3 class="font-headline text-xl text-on-surface dark:text-dark-on-surface mb-3 leading-tight">
+                            Clase magistral divulgación</h3>
+                        <p class="font-body text-sm text-on-surface-variant dark:text-dark-on-surface-variant line-clamp-3">
+                            Participé en instancia académica internacional sobre comunicación pública de la ciencia y divulgación científica universitaria.
+                        </p>
+                    </div>
+                </article>
+
+                <article
+                        class="relative w-[320px] md:w-[380px] shrink-0 glass-panel glass-panel-surface !p-0 overflow-hidden transition-all duration-500 cursor-pointer">
+                    <div class="w-full h-56 overflow-hidden bg-surface-variant dark:bg-dark-surface-variant relative group/img">
+                        <img src="./static/img/6.png" alt="Festival Ciencia"
+                             class="w-full h-full object-cover grayscale opacity-80 group-hover/img:grayscale-0 group-hover/img:opacity-100 group-hover/img:scale-110 transition-all duration-700">
+                    </div>
+                    <div class="p-6">
+                        <span class="font-label text-xs uppercase tracking-widest text-outline dark:text-dark-outline mb-2 block">Antofagasta • 2024</span>
+                        <h3 class="font-headline text-xl text-on-surface dark:text-dark-on-surface mb-3 leading-tight">
+                            Moderadora Festival de Ciencia</h3>
+                        <p class="font-body text-sm text-on-surface-variant dark:text-dark-on-surface-variant line-clamp-3">
+                            Moderé paneles sobre astronomía, divulgación científica y género en el Festival de Ciencia de Fundación Puerto de Ideas.
+                        </p>
+                    </div>
+                </article>
+
+                <article
+                        class="relative w-[320px] md:w-[380px] shrink-0 glass-panel glass-panel-surface !p-0 overflow-hidden transition-all duration-500 cursor-pointer">
+                    <div class="w-full h-56 overflow-hidden bg-surface-variant dark:bg-dark-surface-variant relative group/img">
+                        <img src="./static/img/5.png" alt="Política Género"
+                             class="w-full h-full object-cover grayscale opacity-80 group-hover/img:grayscale-0 group-hover/img:opacity-100 group-hover/img:scale-110 transition-all duration-700">
+                    </div>
+                    <div class="p-6">
+                        <span class="font-label text-xs uppercase tracking-widest text-outline dark:text-dark-outline mb-2 block">Antofagasta • 2024</span>
+                        <h3 class="font-headline text-xl text-on-surface dark:text-dark-on-surface mb-3 leading-tight">
+                            Vocera Política de Género</h3>
+                        <p class="font-body text-sm text-on-surface-variant dark:text-dark-on-surface-variant line-clamp-3">
+                            Difundí la Política Nacional de Igualdad de Género en Ciencia y Tecnología mediante contenido audiovisual institucional.
+                        </p>
+                    </div>
+                </article>
+
+                <article
+                        class="relative w-[320px] md:w-[380px] shrink-0 glass-panel glass-panel-surface !p-0 overflow-hidden transition-all duration-500 cursor-pointer">
+                    <div class="w-full h-56 overflow-hidden bg-surface-variant dark:bg-dark-surface-variant relative group/img">
+                        <img src="./static/img/4.png" alt="InES Género"
+                             class="w-full h-full object-cover grayscale opacity-80 group-hover/img:grayscale-0 group-hover/img:opacity-100 group-hover/img:scale-110 transition-all duration-700">
+                    </div>
+                    <div class="p-6">
+                        <span class="font-label text-xs uppercase tracking-widest text-outline dark:text-dark-outline mb-2 block">Antofagasta • 2024</span>
+                        <h3 class="font-headline text-xl text-on-surface dark:text-dark-on-surface mb-3 leading-tight">
+                            Proyecto InES Género</h3>
+                        <p class="font-body text-sm text-on-surface-variant dark:text-dark-on-surface-variant line-clamp-3">
+                            Presenté objetivos y acciones del proyecto InES Género para reducir brechas de género en la Universidad de Antofagasta.
+                        </p>
+                    </div>
+                </article>
+
+                <article
+                        class="relative w-[320px] md:w-[380px] shrink-0 glass-panel glass-panel-surface !p-0 overflow-hidden transition-all duration-500 cursor-pointer">
+                    <div class="w-full h-56 overflow-hidden bg-surface-variant dark:bg-dark-surface-variant relative group/img">
+                        <img src="./static/img/3.png" alt="INNOVAFEST"
+                             class="w-full h-full object-cover grayscale opacity-80 group-hover/img:grayscale-0 group-hover/img:opacity-100 group-hover/img:scale-110 transition-all duration-700">
+                    </div>
+                    <div class="p-6">
+                        <span class="font-label text-xs uppercase tracking-widest text-outline dark:text-dark-outline mb-2 block">Antofagasta • 2024</span>
+                        <h3 class="font-headline text-xl text-on-surface dark:text-dark-on-surface mb-3 leading-tight">
+                            Panel Mujer INNOVAFEST</h3>
+                        <p class="font-body text-sm text-on-surface-variant dark:text-dark-on-surface-variant line-clamp-3">
+                            Moderé panel sobre mujeres en ciencia chilena, junto a destacadas investigadoras, en INNOVAFEST 2024.
+                        </p>
+                    </div>
+                </article>
+
+                <article
+                        class="relative w-[320px] md:w-[380px] shrink-0 glass-panel glass-panel-surface !p-0 overflow-hidden transition-all duration-500 cursor-pointer">
+                    <div class="w-full h-56 overflow-hidden bg-surface-variant dark:bg-dark-surface-variant relative group/img">
+                        <img src="./static/img/2.png" alt="Feria Científica"
+                             class="w-full h-full object-cover grayscale opacity-80 group-hover/img:grayscale-0 group-hover/img:opacity-100 group-hover/img:scale-110 transition-all duration-700">
+                    </div>
+                    <div class="p-6">
+                        <span class="font-label text-xs uppercase tracking-widest text-outline dark:text-dark-outline mb-2 block">Antofagasta • 2025</span>
+                        <h3 class="font-headline text-xl text-on-surface dark:text-dark-on-surface mb-3 leading-tight">
+                            Jurado Feria Científica</h3>
+                        <p class="font-body text-sm text-on-surface-variant dark:text-dark-on-surface-variant line-clamp-3">
+                            Evalué proyectos científicos de niños y niñas de educación básica en el Instituto José Maza Sancho.
+                        </p>
+                    </div>
+                </article>
+
+                <article
+                        class="relative w-[320px] md:w-[380px] shrink-0 glass-panel glass-panel-surface !p-0 overflow-hidden transition-all duration-500 cursor-pointer">
+                    <div class="w-full h-56 overflow-hidden bg-surface-variant dark:bg-dark-surface-variant relative group/img">
+                        <img src="./static/img/1.png" alt="Jornadas Género"
+                             class="w-full h-full object-cover grayscale opacity-80 group-hover/img:grayscale-0 group-hover/img:opacity-100 group-hover/img:scale-110 transition-all duration-700">
+                    </div>
+                    <div class="p-6">
+                        <span class="font-label text-xs uppercase tracking-widest text-outline dark:text-dark-outline mb-2 block">Santiago • 2025</span>
+                        <h3 class="font-headline text-xl text-on-surface dark:text-dark-on-surface mb-3 leading-tight">
+                            Perspectiva de Género</h3>
+                        <p class="font-body text-sm text-on-surface-variant dark:text-dark-on-surface-variant line-clamp-3">
+                            Participé en seminarios nacionales sobre perspectiva de género en investigación y docencia universitaria en Santiago y Valparaíso.
+                        </p>
+                    </div>
+                </article>
+
+                <article
+                        class="relative w-[320px] md:w-[380px] shrink-0 glass-panel glass-panel-surface !p-0 overflow-hidden transition-all duration-500 cursor-pointer">
+                    <div class="w-full h-56 overflow-hidden bg-surface-variant dark:bg-dark-surface-variant relative group/img">
+                        <img src="./static/img/0.png" alt="Colbún"
+                             class="w-full h-full object-cover grayscale opacity-80 group-hover/img:grayscale-0 group-hover/img:opacity-100 group-hover/img:scale-110 transition-all duration-700">
+                    </div>
+                    <div class="p-6">
+                        <span class="font-label text-xs uppercase tracking-widest text-outline dark:text-dark-outline mb-2 block">Antofagasta • 2026</span>
+                        <h3 class="font-headline text-xl text-on-surface dark:text-dark-on-surface mb-3 leading-tight">
+                            Parque Eólico Colbún</h3>
+                        <p class="font-body text-sm text-on-surface-variant dark:text-dark-on-surface-variant line-clamp-3">
+                            Visité el Parque Eólico de instalaciones de Colbún como integrante de la Mesa de Género y Capital Humano de Seremi Energía.
+                        </p>
+                    </div>
+                </article>
+
+                <div class="flex gap-6 shrink-0" aria-hidden="true">
+                    <article
+                            class="relative w-[320px] md:w-[380px] shrink-0 glass-panel glass-panel-surface !p-0 overflow-hidden transition-all duration-500">
+                        <div class="w-full h-56 bg-surface-variant/30">
+                            <img src="./static/img/10.png" class="w-full h-full object-cover grayscale opacity-50">
+                        </div>
+                        <div class="p-6 opacity-50">
+                            <span class="font-label text-xs uppercase tracking-widest text-outline">Santiago • 2023</span>
+                            <h3 class="font-headline text-xl text-on-surface mb-3 leading-tight">Difusión
+                                científica...</h3>
+                        </div>
+                    </article>
+                </div>
             </div>
         </div>
     </section>
