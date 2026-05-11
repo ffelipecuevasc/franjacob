@@ -333,43 +333,37 @@ html.dark body::after {
 }
 
 /* =======================================================
-   MARQUEE INFINITO (HITOS PROFESIONALES)
+   HITOS PROFESIONALES
    ======================================================= */
-/* El motor base de la animación */
-.animate-marquee {
-    /* 40 segundos es un tiempo ideal para que sea legible sin marear */
-    animation: marquee 40s linear infinite;
-    /* Optimización de hardware para que la GPU procese el movimiento a 60fps fijos */
-    will-change: transform;
+
+/* Ocultar barra de scroll en el track de hitos */
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE y Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari y Opera */
 }
 
-/* Pausar la cinta cuando el usuario pasa el mouse sobre el contenedor (la clase .group en el HTML) */
-.group:hover .animate-marquee {
-    animation-play-state: paused;
+/* CLASE DE ESTADO ACTIVO (Para la Fase 2 y 3) */
+/* Esta clase anula los estados base de las tarjetas cuando están en el foco */
+.cover-card.is-active {
+    @apply scale-100 opacity-100 grayscale-0 z-30;
+    filter: blur(0px);
+    /* Inyectamos las sombras premium que ya tenemos en el config */
+    @apply shadow-soft-layered-hover dark:shadow-neon-glow;
 }
 
-/* La matemática del bucle perfecto */
-@keyframes marquee {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        /* Desplazamiento exacto hacia la copia clonada, compensando el gap-6 (1.5rem) */
-        transform: translateX(calc(-50% - 0.75rem));
-    }
-}
-
-/* Accesibilidad: Apagar animación si el usuario prefiere movimiento reducido en su SO */
-@media (prefers-reduced-motion: reduce) {
-    .animate-marquee {
-        animation: none;
-    }
-    /* Permitir scroll manual si el usuario tiene las animaciones desactivadas */
-    #hitos .flex.overflow-x-hidden {
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-    }
-    #hitos article {
-        scroll-snap-align: start;
-    }
+/* ==========================================================
+   ESCUDO COVER FLOW:
+   Evita que el hover de .glass-panel rompa la física de
+   las tarjetas inactivas (evita saltos bruscos).
+   ========================================================== */
+.cover-card:not(.is-active):hover {
+    /* Forzamos a que se mantenga pequeña y sin flotar */
+    transform: scale(0.9) translate(0, 0) !important;
+    /* Evitamos que dispare las sombras premium prematuramente */
+    box-shadow: none !important;
+    /* Opcional: Un cursor distinto para indicar que no es la principal */
+    cursor: pointer;
 }

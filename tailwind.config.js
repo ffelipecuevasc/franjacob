@@ -1,7 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   // Le dice a Tailwind qué archivos escanear para buscar clases
-  content: ["./index.html"],
+  content: [
+    "./index.html",
+    "./static/js/**/*.js"
+  ],
   darkMode: "class",
   theme: {
     extend: {
